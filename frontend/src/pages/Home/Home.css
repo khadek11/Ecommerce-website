@@ -1,0 +1,68 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+.homeBannerSection {
+  width: 100vw; 
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  position:relative;
+  overflow: hidden;
+}
+
+.homeBannerSection *{
+  outline: none;
+}
+
+.homeBannerSection .slick-arrow{
+  position: absolute;
+  top: 45%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 100%;
+  font-family: FontAwesome;
+  font-weight: bold;
+}
+.homeBannerSection .slick-arrow.slick-next{
+  right: 25px;
+  background: #000;
+
+}
+.homeBannerSection .slick-arrow.slick-prev{
+  left: 30px;
+  background: #000;
+}
+.homeBannerSection .slick-arrow.slick-next::before{
+ 
+  color: #fff;
+  font-family: FontAwesome;
+
+} 
+.homeBannerSection .slick-arrow.slick-prev::before{
+ 
+  color: #fff;
+  font-family: FontAwesome;
+
+} 
+.homeBannerSection .slick-arrow.slick-prev:hover{
+  background: #000;
+}
+.homeBannerSection .slick-arrow.slick-next:hover{
+  background: #000;
+}
+
+.item {
+  width: 80%; 
+  margin-left: 85px;
+ 
+}
+
+.itemImg {
+  width: 90%;
+  height: 400px;
+  display: block;
+}

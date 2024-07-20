@@ -1,0 +1,472 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+.header{
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+
+}
+/* @media(min-width: 1300px){
+    .container, .container-lg .container-md, .container-sm, .container-xl{
+        max-width: 1200px;
+    }
+} */
+
+::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #ccc;
+}
+
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+.bg-header{
+    background-color: #8e00a3;
+    text-align: center;
+    max-width: 100%;
+}
+.headerWrapper .bg-header{
+    padding: 8px 0px;
+}
+.headerWrapper .bg-header p{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+}
+.headerWrapper{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.headerWrapper .header{
+    width: 100%;
+    height: auto;
+}
+
+ .row{
+    display: flex;
+    flex-direction: row;
+    margin-left:80px;
+ }
+
+.image-container {
+    width: 150px;
+    height:50px;
+    margin-right: 20px;
+}
+.logo-img{
+    object-fit: cover;
+    max-height: 100%;
+    width: 100%;
+    
+}
+.part2{
+    display: flex;
+    align-items: center;
+}
+
+.countryDrop{
+    width: 150px;
+    height: 50px;
+    color: #000 !important;
+    min-width: 150px;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    border-radius: 10px; 
+    border: 1px solid rgba(0, 0, 0, 0.2) !important; 
+    
+}
+.countryDrop :hover{
+    cursor: pointer;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.label{
+    font-size: 12px !important;
+    text-transform:capitalize !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+    margin-bottom: 5px;
+    margin-top: 4px;
+    line-height: 14px;
+
+}
+.name{
+    font-size: 12px !important;
+    text-transform: capitalize !important;
+    color: #233a95 !important;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.headerSearch{
+    width: 90%;
+    height: 50px;
+    margin-left: 20px;
+    background-color: #f3f4f7;
+    padding: 1opx;
+    display: flex;
+    border-radius: 10px;
+}
+.headerSearch input{
+    background: transparent;
+    outline: none !important;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.8);
+    width: 700px;
+    border-radius: 4px;
+    height: 25px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 0px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.headerSearch button{
+    background: transparent;
+    outline: none !important;
+    color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 2px;
+    border: 0px;
+    margin-right: 5px;
+
+}
+.svg{
+    font-size: 30px;
+    color: #000;
+    font-weight: 500;
+}
+.part3{
+    margin-left: 30px;
+    margin-top: 10px;
+    display: flex;
+    
+}
+
+.circle{
+    align-items: center;
+    justify-content: center;   
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: ipx solid rgba(0, 0, 0, 0.1);
+    color: #000;
+    margin-left: 10px;
+   
+}
+.svg-user{
+    font-size: 20px;
+}
+
+.cartTab{
+    margin-left: 30px;
+    color: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+
+}
+.price{
+    font-size: 18px;
+
+}
+.cartTab button{
+    background: #fff1ee !important;
+}
+.cartTab button svg{
+    color: #ea2b0f !important;
+}
+.position{
+    position: relative;
+}
+.count{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -6px;
+    right: -4px;
+    background: #ea2b0f;
+    border-radius: 50%;
+    color: white;
+    width: 15px;
+    height: 15px;
+}
+.row2{
+    display: flex;
+    margin-left:80px;
+    margin-top: 30px;
+
+}
+nav .allCatTab{
+    background: #2bbef8;
+    padding: 10px 20px;
+    border-radius: 30px;
+    align-items: center;
+}
+nav .allCatTab *{
+    color: #fff;
+}
+nav .allCatTab:hover{
+    background: #2bbef8
+}
+nav .allCatTab text{
+    font-weight: 600;
+}
+nav .allCatTab svg{
+    font-size: 20px !important;
+}
+
+.icon1{
+    margin-right: 5px;
+   
+}
+.icon2{
+    margin-left: 5px;
+}
+nav .navpart1{
+    max-width: 20%;
+    flex: 0 0 20%;
+}
+nav .navpart1 .catWrapper{
+    position: relative;
+}
+nav .navpart1 .catWrapper .sidebarNav{
+    width: 80%;
+    height: 0px;
+    opacity: 0;
+    background: #fff;
+    position: absolute; 
+    top: 140%;
+    left: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    padding: 15px 0px;
+    transition: all 0.2s;
+    visibility: hidden;
+    
+}
+
+nav .navpart1 .catWrapper .sidebarNav ul li{
+    position: static;
+    padding-right: 15px;
+}
+
+nav .navpart1 .catWrapper .sidebarNav ul li .subMenu{
+    position: absolute;
+    top: 0px;
+    left: 102%;
+    width: 250px;
+    height: auto;
+    background: #fff;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    border-left: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+nav .navpart1 .catWrapper .sidebarNav ul li .subMenu button{
+    border-radius: 0px;
+}
+.rightAngle{
+    margin-left: auto;
+    font-size: 16px;
+    opacity: 0.8;
+}
+nav .navpart1 .catWrapper .sidebarNav ul li:hover .subMenu{
+    opacity: 1;
+    visibility: inherit;
+    left: 100%;
+    padding: 20px;
+
+}
+nav .navpart1 .catWrapper .sidebarNav.open{
+    height: auto;
+    opacity: 1;
+    visibility: inherit;
+    z-index: 1000;
+}
+
+nav .navpart1 .catWrapper .sidebarNav ul li{
+    width: 100%;
+    list-style-type: none;
+    margin-bottom: 5px;
+    padding: 2px 0px;
+    
+}
+nav .navpart1 .catWrapper .sidebarNav ul li a{
+    width: 100%;
+}
+nav .navpart1 .catWrapper .sidebarNav ul li button{
+    color: #000;
+    width: 100%;
+    justify-content: flex-start;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 700;
+}
+nav .navpart1 .catWrapper .sidebarNav ul li button:hover{
+    background: transparent;
+}
+nav .navpart2{
+    max-width: 80%;
+    flex: 0 0 80%;
+}
+
+nav .list{
+    display: flex;
+    padding: 8px 20px;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+
+nav .list-item{
+    margin-left: 30px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+nav .list-item a {
+    text-decoration: none;
+}
+nav .list-item a button{
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform:uppercase;
+    color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    padding: 15px 15px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 30px;
+    list-style-type: none;
+    
+}
+nav .navpart2 ul li{
+    position: relative;
+    padding-bottom: 20px;
+}
+nav .navpart2 ul li .subMenu{
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    min-width: 200px;
+    background: #fff;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+nav .navpart2 ul li .subMenu a{
+    display: block;
+    width: 100%;
+}
+nav .navpart2 ul li .subMenu a button{
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 0px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+nav .navpart2 ul li .subMenu a button:hover {
+    background: #f1f1f1;
+}
+nav .navpart2 ul li:hover .subMenu{
+    opacity: 1;
+    visibility: inherit;
+    top: 100%;
+    z-index: 100;
+}
+
+nav .list-item a button:hover{
+    background: #f0faff;
+    color: #2bbef8;
+
+}
+
+.locationModal .MuiPaper-elevation{
+    padding: 25px;
+    width: 100%;
+    justify-content: center;
+    max-width: 450px;
+
+}
+.MuiPaper-elevation{
+    position: relative;
+}
+
+ .close-location{
+    background: #000;
+    position: absolute;
+    right: -400px;
+    top: -70px;
+    width: 40px;  
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    
+ }
+ .close-location svg{
+    color: #000;
+    font-weight: 900;
+    font-size: 22px;
+ }
+.locationHeader{
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 5px;
+
+}
+.locationtext{
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+.locationModal .countryList{
+    margin-bottom: 0px;
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 3px;
+   
+
+}
+.locationModal .countryList li{
+    width: 100%;
+    list-style: none; 
+}
+.locationModal .countryList li button{
+    width: 100%;
+    text-transform: capitalize !important;
+    color: #000;
+    justify-content: flex-start;
+    padding: 15px 20px;
+
+}
+.locationModal .countryList li button:hover{
+    background: #f1f1f1 !important;
+}
+.locationModal .countryList li button.active{
+    background: #e2e2e2 !important;
+}
+
+
+ 
