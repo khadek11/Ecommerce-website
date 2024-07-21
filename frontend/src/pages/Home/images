@@ -33,3 +33,16 @@ vertical: true,
      
 <img class="ty-pict     cm-image lazyloaded" alt="" title="" src="https://shopit.co.ke/images/abt__ut2/banners/all/80/31-abt__ut2_main_image-banner_9nko-u5.jpg" id="det_img_1830247865" width="900" height="750" data-src="https://shopit.co.ke/images/abt__ut2/banners/all/80/31-abt__ut2_main_image-banner_9nko-u5.jpg" oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
   
+
+  <div className="item2 productItem" ></div>
+                    <div className="imgwrapper">
+                      <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg"/>
+                    </div>
+                    <div className="item2 productItem"></div>
+                    <div className="imgwrapper">
+                      <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg"/>
+                    </div>
+                    <div className="item2 productItem" ></div>
+                    <div className="imgwrapper">
+                      <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg"/>
+                    </div>

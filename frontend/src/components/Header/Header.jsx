@@ -18,9 +18,9 @@ function Header() {
   return (
     <>
       <div className="headerWrapper">
-        <div className="bg-header">
+        <div className="bgheader">
           <div className="container">
-            <p className="mb-0 mt-0 text-center">Due to the current GenZ revolutionary movement orders may be processed with a slight delay</p>
+            <p className="">Due to the current GenZ revolutionary movement orders may be processed with a slight delay</p>
           </div>
         </div>
 
