@@ -28,7 +28,24 @@ https://sslimages.shoppersstop.com/sys-master/root/h94/hd0/33142946791454/Rayban
 vertical: true,
     verticalSwiping: true,
 
+omeCat .swiper .item img {
+    margin-bottom: 10px;
+    width: 60%;
+}
+img, svg {
+    vertical-align: middle;
+}
+omeCat .swiper .item {
+    border: 1px solid #0000001a;
+    border-radius: 10px;
+    height: auto;
+    padding: 15px 5px;
+    transition: all .2s ease-in-out;
+    width: 100%;
+}
 
+img {
+    border-style: 
     
      
 <img class="ty-pict     cm-image lazyloaded" alt="" title="" src="https://shopit.co.ke/images/abt__ut2/banners/all/80/31-abt__ut2_main_image-banner_9nko-u5.jpg" id="det_img_1830247865" width="900" height="750" data-src="https://shopit.co.ke/images/abt__ut2/banners/all/80/31-abt__ut2_main_image-banner_9nko-u5.jpg" oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">

@@ -1,23 +1,23 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css");
 
-.body{
+.body {
   background: whitesmoke;
 }
 .homeBannerSection {
-  width: 100vw; 
+  width: 100vw;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-  position:relative;
+  position: relative;
   overflow: hidden;
 }
 
-.homeBannerSection *{
+.homeBannerSection * {
   outline: none;
 }
 
-.homeBannerSection .slick-arrow{
+.homeBannerSection .slick-arrow {
   position: absolute;
   top: 45%;
   z-index: 100;
@@ -31,40 +31,33 @@
   font-family: FontAwesome;
   font-weight: bold;
 }
-.homeBannerSection .slick-arrow.slick-next{
+.homeBannerSection .slick-arrow.slick-next {
   right: 25px;
   background: #000;
-
 }
-.homeBannerSection .slick-arrow.slick-prev{
+.homeBannerSection .slick-arrow.slick-prev {
   left: 30px;
   background: #000;
 }
-.homeBannerSection .slick-arrow.slick-next::before{
- 
+.homeBannerSection .slick-arrow.slick-next::before {
   color: #fff;
   font-family: FontAwesome;
-
-} 
-.homeBannerSection .slick-arrow.slick-prev::before{
- 
+}
+.homeBannerSection .slick-arrow.slick-prev::before {
   color: #fff;
   font-family: FontAwesome;
-
-} 
-.homeBannerSection .slick-arrow.slick-prev:hover{
+}
+.homeBannerSection .slick-arrow.slick-prev:hover {
   background: #000;
 }
-.homeBannerSection .slick-arrow.slick-next:hover{
+.homeBannerSection .slick-arrow.slick-next:hover {
   background: #000;
 }
 
 .item {
-  width: 80%; 
+  width: 80%;
   margin-left: 85px;
- 
 }
-
 
 .itemImg {
   width: 90%;
@@ -72,61 +65,59 @@
   display: block;
 }
 
-.cursor{
+.cursor {
   cursor: pointer;
 }
-.homeProducts{
+.homeProducts {
   padding: 25px 0px;
   width: 100%;
-
 }
-.row{
+.row {
   display: flex;
   flex-direction: row;
 }
 
-.banner1{
+.banner1 {
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
   margin-right: 20px;
   margin-bottom: 20px;
 }
-.text-light{
+.text-light {
   color: #383434;
   margin-bottom: 0;
-  
 }
-.info{
+.info {
   width: 950px;
 }
-.gridInfo{
+.gridInfo {
   display: flex;
   align-items: center;
 }
 
-.productsRow .hd{
+.productsRow .hd {
   font-size: 25px;
   font-weight: 600;
 }
-.gridInfo .viewAllBtn{
+.gridInfo .viewAllBtn {
   padding: 8px 15px;
   background: #fff;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   margin-left: auto;
   border-radius: 30px;
   color: #000;
   font-weight: 600;
 }
-.gridInfo .viewAllBtn svg{
+.gridInfo .viewAllBtn svg {
   font-size: 20px;
 }
 
-.product-row{
+.product-row {
   width: 1150px;
 }
 
-.imgwrapper{
+.imgwrapper {
   width: 25px;
   height: 10px;
   padding: 0%;
@@ -136,8 +127,8 @@
 .productItem {
   margin-right: 5px;
   display: block;
-  margin-top: 10px; 
-  border: 1px solid rgba(0,0,0,0.1);
+  margin-top: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   justify-content: center;
   background: #f1f1f1;
   border-radius: 10px !important;
@@ -145,11 +136,9 @@
   height: auto;
   overflow: hidden;
   position: relative;
-  transition: all .2s;
+  transition: all 0.2s;
   width: 100%;
   padding: 0px;
-
-
 }
 
 .productItem .imgwrapper {
@@ -164,9 +153,8 @@
   padding: 0px;
   margin-top: 0px;
   margin-right: 14px;
-
 }
-.imgwrapper img{
+.imgwrapper img {
   max-width: 100%;
   max-height: 100%;
   width: auto;
@@ -179,55 +167,48 @@
   margin-right: -10px;
 }
 
-.product-row .slick-arrow{
+.product-row .slick-arrow {
   position: absolute;
   top: 45%;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:antiquewhite;
+  background-color: antiquewhite;
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  
+
   font-weight: bold;
 }
-.product-row .slick-arrow.slick-next{
+.product-row .slick-arrow.slick-next {
   right: 20px;
-  
 }
-.product-row .slick-arrow.slick-prev{
+.product-row .slick-arrow.slick-prev {
   left: -20px;
-  
 }
-.product-row .slick-arrow.slick-next::before{
- 
-  color: red;
-  
-} 
-.product-row .slick-arrow.slick-prev::before{
- 
-  color: red;
-  
-
-} 
-.product-row .slick-arrow.slick-prev:hover{
+.product-row .slick-arrow.slick-next::before {
   color: red;
 }
-.product-row .slick-arrow.slick-next:hover{
+.product-row .slick-arrow.slick-prev::before {
   color: red;
 }
-.text-success{
+.product-row .slick-arrow.slick-prev:hover {
+  color: red;
+}
+.product-row .slick-arrow.slick-next:hover {
+  color: red;
+}
+.text-success {
   display: block;
   color: green;
   font-weight: 700;
 }
-.productItem{
+.productItem {
   position: relative;
   cursor: pointer;
 }
-.productItem .imgwrapper .badge{
+.productItem .imgwrapper .badge {
   display: block;
   padding: 7px 10px;
   background: #2bbef9;
@@ -239,8 +220,7 @@
   border-radius: 5px;
 }
 
-
-.productItem .actions{
+.productItem .actions {
   position: absolute;
   top: 20px;
   right: -100%;
@@ -249,83 +229,149 @@
   flex-direction: column;
   gap: 10px;
 }
-.productItem .imgwrapper img{
-    transition: all 0.3s ease-in-out;
+.productItem .imgwrapper img {
+  transition: all 0.3s ease-in-out;
 }
-.productItem .imgwrapper:hover img{
+.productItem .imgwrapper:hover img {
   transform: scale(1.1);
 }
-.productItem .actions button{
+.productItem .actions button {
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 40px;
   height: 40px;
   width: 40px;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background: #fff;
 }
-.productItem .imgwrapper{
+.productItem .imgwrapper {
   overflow: hidden;
 }
-.productItem .imgwrapper:hover .actions{
+.productItem .imgwrapper:hover .actions {
   opacity: 1;
   right: 10px;
 }
-.productItem .actions button svg{
+.productItem .actions button svg {
   color: #000;
   opacity: 0.7;
   font-size: 16px;
   font-weight: 600;
 }
-.productItem .actions button:hover svg{
+.productItem .actions button:hover svg {
   color: #fff;
 }
-.productItem .actions button:hover{
+.productItem .actions button:hover {
   background: #233a95;
-  
 }
-.imgwrapper{
+.imgwrapper {
   display: flex;
   flex-direction: column;
 }
 
-.productItem h4{
+.productItem h4 {
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 2px;
-
 }
-.productItem .infoo{
+.productItem .infoo {
   display: flex;
   flex-direction: column;
   padding: 15px;
 }
-.read-only{
+.read-only {
   margin-bottom: 2px;
   margin-top: 2px;
 }
-.flex{
+.flex {
   display: flex;
 }
 
-.oldPrice{
+.oldPrice {
   margin-right: 8px;
   font-size: 20px;
   font-weight: 600;
-  color: rgba(0,0,0,0.3);
+  color: rgba(0, 0, 0, 0.3);
   text-decoration: line-through;
 }
-.netPrice{
+.netPrice {
   margin-right: 20px;
   font-size: 22px;
   font-weight: 600;
   color: red;
-
 }
 
-.infooo{
+.infooo {
   margin-top: 10px;
+}
+
+.homeCat {
+  width: 90%;
+  margin: auto;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  position: relative;
+}
+.containerr {
+  width: 100%;
+  overflow: hidden;
+}
+.productitemm {
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: #f1f1f1;
+  width: 100%;
+  height: auto;
+
+}
+.imgWrapperr {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
+
+}
+.imgWrapperr img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.features{
+  color: #233a95;
+  align-self: center;
+  font-size: 28px;
+  text-decoration: wavy;
+}
+
+.productitemm .slick-arrow {
+  position: absolute;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  font-weight: bold;
+}
+.productitemm .slick-arrow.slick-next {
+  top: -50px;
+
+}
+.productitemm .slick-arrow.slick-prev {
+  left: -20px;
+}
+.productitemm .slick-arrow.slick-next::before {
+  color: red;
+}
+.productitemm .slick-arrow.slick-prev::before {
+  color: red;
+}
+.productitemm .slick-arrow.slick-prev:hover {
+  color: red;
+}
+.productitemm .slick-arrow.slick-next:hover {
+  color: red;
 }

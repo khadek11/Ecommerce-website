@@ -2,6 +2,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Home.css";
+import slideBanner1 from '../../assets/images/slideBanner1.jpg'
+import slideBanner2 from '../../assets/images/slideBanner2.jpg'
 
 function HomeBanner() {
   const settings = {
@@ -20,6 +22,20 @@ function HomeBanner() {
         <div className="item">
           <img
             src="https://sslimages.shoppersstop.com/sys-master/root/hd6/h55/33081764675614/watches_top-banner-web--new-home-page-main-2024-07-08.jpg"
+            alt="banner"
+            className="itemImg"
+          />
+        </div>
+        <div className="item">
+          <img
+            src={slideBanner1}
+            alt="banner"
+            className="itemImg"
+          />
+        </div>
+        <div className="item">
+          <img
+            src={slideBanner2}
             alt="banner"
             className="itemImg"
           />
