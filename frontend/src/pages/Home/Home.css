@@ -68,7 +68,7 @@
 
 .itemImg {
   width: 90%;
-  height: auto;
+  height: 450px;
   display: block;
 }
 
@@ -89,7 +89,8 @@
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
-  margin-right: 20px
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 .text-light{
   color: #383434;
@@ -222,6 +223,73 @@
   color: green;
   font-weight: 700;
 }
+.productItem{
+  position: relative;
+  cursor: pointer;
+}
+.productItem .imgwrapper .badge{
+  display: block;
+  padding: 7px 10px;
+  background: #2bbef9;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  color: #fff;
+  border-radius: 5px;
+}
+
+
+.productItem .actions{
+  position: absolute;
+  top: 20px;
+  right: -100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.productItem .imgwrapper img{
+    transition: all 0.3s ease-in-out;
+}
+.productItem .imgwrapper:hover img{
+  transform: scale(1.1);
+}
+.productItem .actions button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 50%;
+  background: #fff;
+}
+.productItem .imgwrapper{
+  overflow: hidden;
+}
+.productItem .imgwrapper:hover .actions{
+  opacity: 1;
+  right: 10px;
+}
+.productItem .actions button svg{
+  color: #000;
+  opacity: 0.7;
+  font-size: 16px;
+  font-weight: 600;
+}
+.productItem .actions button:hover svg{
+  color: #fff;
+}
+.productItem .actions button:hover{
+  background: #233a95;
+  
+}
+.imgwrapper{
+  display: flex;
+  flex-direction: column;
+}
 
 .productItem h4{
   font-size: 15px;
@@ -254,5 +322,10 @@
   font-size: 22px;
   font-weight: 600;
   color: red;
+
+}
+
+.infooo{
+  margin-top: 10px;
   
 }
