@@ -17,6 +17,7 @@ function HomeBanner() {
   };
 
   return (
+    <div className="space">
     <div className="homeBannerSection">
       <Slider {...settings}>
         <div className="item">
@@ -114,6 +115,7 @@ function HomeBanner() {
         </div>
         
       </Slider>
+    </div>
     </div>
   );
 }

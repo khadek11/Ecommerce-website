@@ -6,11 +6,23 @@ import "./Home.css";
 import { Rating } from "@mui/material";
 import { TfiFullscreen } from "react-icons/tfi";
 import { IoMdHeartEmpty } from "react-icons/io";
+import trimmer1 from '../../assets/products/trimmers/trimmer1.webp'
+import refrigerator2 from "../../assets/products/refrigerator/refrigerator2.webp"
+import watch1 from '../../assets/products/watches/watch3.webp'
+import watch2 from '../../assets/products/watches/watch4.webp'
+import watch3 from '../../assets/products/watches/watch1.webp'
+import watch4 from '../../assets/products/watches/watch2.webp'
+import tv4 from '../../assets/products/TV/tv4.webp'
+import tv3 from '../../assets/products/TV/tv3.webp'
+import earphone1 from '../../assets/products/earphones/earphone1.webp'
+import earphone2 from '../../assets/products/earphones/earphone2.webp'
+
 
 const NewProducts = () => {
     
     return(
         <>
+        <div className="space">
         <div className="grid productsRow grid2">
               <div className="gridInfo">
                 <div className="info infooo">
@@ -28,7 +40,7 @@ const NewProducts = () => {
               <div className="product-row productRow2">
                   <div className="item2 productItem">
                     <div className="imgwrapper">
-                      <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg" />
+                      <img src={watch4} />
 
                       <span className="badge badge-primary">28%</span>
                       <div className="actions">
@@ -41,7 +53,7 @@ const NewProducts = () => {
                       </div>
                     </div>
                     <div className="infoo">
-                      <h4>Werthers Original Caramel Hard</h4>
+                      <h4>Godrej 215 L Direct Cool Single Door 4 Star Refrigerator with Base Drawer</h4>
                       <span className="text-success">In stock</span>
                       <Rating
                         className="read-only"
@@ -61,7 +73,7 @@ const NewProducts = () => {
 
                   <div className="item2 productItem">
                     <div className="imgwrapper">
-                      <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1721569165/1721569164353_test.png" />
+                      <img src={trimmer1} />
 
                       <span className="badge badge-primary">28%</span>
                       <div className="actions">
@@ -93,7 +105,7 @@ const NewProducts = () => {
                   </div>
                   <div className="item2 productItem">
                     <div className="imgwrapper">
-                      <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1721279418/1721279417849_sony-alpha-ilce-6100y-24-2-mp-mirrorless-digital-slr-camera-with-16-50-mm-and-55-210mm-power-zoom-lens-aps-c-sensor-fast-auto-focus-real-time-eye-af-real-time-tracking-4k-vlogging-camera-tiltable-screen-d_1.webp" />
+                      <img src={refrigerator2} />
 
                       <span className="badge badge-primary">28%</span>
                       <div className="actions">
@@ -106,7 +118,7 @@ const NewProducts = () => {
                       </div>
                     </div>
                     <div className="infoo">
-                      <h4>Sony Alpha ILCE Glimmer Black,12...</h4>
+                      <h4>LG 260 L Frost Free Double Door 2 Star Refrigerator (Ebony Regal, GL-N292RERY)4.webp</h4>
                       <span className="text-success">In stock</span>
                       <Rating
                         className="read-only"
@@ -126,7 +138,7 @@ const NewProducts = () => {
 
                   <div className="item2 productItem">
                     <div className="imgwrapper">
-                      <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1721279291/1721279290434_lg-80-cm-32-inch-hd-ready-led-smart-tv-32lm560-digital-o491898016-p590039885-1-202009260709.webp" />
+                      <img src={earphone2} />
                       <span className="badge badge-primary">28%</span>
                       <div className="actions">
                         <Button>
@@ -157,7 +169,7 @@ const NewProducts = () => {
                   </div>
                   <div className="item2 productItem">
                     <div className="imgwrapper">
-                      <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1721279140/1721279140081_samsung-galaxy-f-series-f23-5g-128-gb-4-gb-ram-copper-blush-mobile-phone-digital-o493666095-p600340990-0-202304101447.webp" />
+                      <img src={watch1} />
                       <span className="badge badge-primary">28%</span>
                       <div className="actions">
                         <Button>
@@ -188,7 +200,7 @@ const NewProducts = () => {
                   </div>
                   <div className="item2 productItem">
                     <div className="imgwrapper">
-                      <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1720602808/1720602807718_fortune-sunlite-refined-sunflower-oil-1-l-product-images-o490000052-p490000052-0-202203150155.webp" />
+                      <img src={earphone1}/>
                       <span className="badge badge-primary">28%</span>
                       <div className="actions">
                         <Button>
@@ -218,7 +230,7 @@ const NewProducts = () => {
                   </div>
                   <div className="item2 productItem">
                     <div className="imgwrapper">
-                      <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1720602808/1720602807718_fortune-sunlite-refined-sunflower-oil-1-l-product-images-o490000052-p490000052-0-202203150155.webp" />
+                      <img src={tv3} />
                       <span className="badge badge-primary">28%</span>
                       <div className="actions">
                         <Button>
@@ -230,7 +242,7 @@ const NewProducts = () => {
                       </div>
                     </div>
                     <div className="infoo">
-                      <h4>Fortune sunlite refined sunflower oil</h4>
+                      <h4>PHILIPS MG3710-65 Trimmer 60 min Runtime 8 Length Settings (Black)4.webp</h4>
                       <span className="text-success">In stock</span>
                       <Rating
                         className="read-only"
@@ -248,7 +260,7 @@ const NewProducts = () => {
                   </div>
                   <div className="item2 productItem">
                     <div className="imgwrapper">
-                      <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1720602808/1720602807718_fortune-sunlite-refined-sunflower-oil-1-l-product-images-o490000052-p490000052-0-202203150155.webp" />
+                      <img src={watch3} />
                       <span className="badge badge-primary">28%</span>
                       <div className="actions">
                         <Button>
@@ -260,7 +272,7 @@ const NewProducts = () => {
                       </div>
                     </div>
                     <div className="infoo">
-                      <h4>Fortune sunlite refined sunflower oil</h4>
+                      <h4>PHILIPS MG3710-65 Trimmer 60 min Runtime 8 Length Settings (Black)4.webp</h4>
                       <span className="text-success">In stock</span>
                       <Rating
                         className="read-only"
@@ -278,7 +290,7 @@ const NewProducts = () => {
                   </div>
                   <div className="item2 productItem">
                     <div className="imgwrapper">
-                      <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1720602808/1720602807718_fortune-sunlite-refined-sunflower-oil-1-l-product-images-o490000052-p490000052-0-202203150155.webp" />
+                      <img src={watch2} />
                       <span className="badge badge-primary">28%</span>
                       <div className="actions">
                         <Button>
@@ -290,7 +302,7 @@ const NewProducts = () => {
                       </div>
                     </div>
                     <div className="infoo">
-                      <h4>Fortune sunlite refined sunflower oil</h4>
+                      <h4>Ambrane AGK-11 Trimmer 60 min Runtime 18 Length Settings (Black)1.webpl</h4>
                       <span className="text-success">In stock</span>
                       <Rating
                         className="read-only"
@@ -308,7 +320,7 @@ const NewProducts = () => {
                   </div>
                   <div className="item2 productItem">
                     <div className="imgwrapper">
-                      <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1720602808/1720602807718_fortune-sunlite-refined-sunflower-oil-1-l-product-images-o490000052-p490000052-0-202203150155.webp" />
+                      <img src={tv4} />
                       <span className="badge badge-primary">28%</span>
                       <div className="actions">
                         <Button>
@@ -320,7 +332,7 @@ const NewProducts = () => {
                       </div>
                     </div>
                     <div className="infoo">
-                      <h4>Fortune sunlite refined sunflower oil</h4>
+                      <h4>Ambrane AGK-11 Trimmer 60 min Runtime 18 Length Settings (Black)1.webp</h4>
                       <span className="text-success">In stock</span>
                       <Rating
                         className="read-only"
@@ -338,6 +350,7 @@ const NewProducts = () => {
                   </div>
                 
               </div>
+            </div>
             </div>
         </>
     )

@@ -4,6 +4,7 @@
 .body {
   background: whitesmoke;
 }
+
 .homeBannerSection {
   width: 100vw;
   justify-content: center;
@@ -78,7 +79,7 @@
 }
 
 .banner1 {
-  width: 100%;
+  width: 220px;
   border-radius: 10px;
   overflow: hidden;
   margin-right: 20px;
@@ -104,7 +105,7 @@
   padding: 8px 15px;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin-left: auto;
+  margin-right: 50px;
   border-radius: 30px;
   color: #000;
   font-weight: 600;
@@ -387,7 +388,7 @@
   gap: 10px;
 }
 .productRow2 .productItem{
-  width: 18%;
+  width:18%;
   overflow: hidden;
   border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
@@ -397,12 +398,113 @@
   gap: 15px;
   width: 100%;
 }
-.homeProducts .container .row .sticky{
+.homeProducts .container .row .stickyyy{
   position: sticky;
   top: 10px;
   z-index: 10000;
 }
 
-.banners {
-  width: 110%;
+
+
+.containerrr {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.roww {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  flex-direction: row;
+  
+}
+.col{
+  width: 50%;
+  position: static;
+}
+
+
+
+.newsLetterSection{
+  width: 100%;
+  height: auto;
+  background: #233a95;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  align-items: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0px;
+ 
+}
+.text-white{
+  color: #fff;
+  margin-left: 20px;
+}
+
+.textdis{
+  margin-bottom: 1px;
+  font-size: 20px;
+
+}
+
+.texthead{
+  font-size: 35px;
+  font-weight: bolder;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.text-light{
+  color: #fff;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+.coupon{
+  position: absolute;
+  right: 0px;
+  bottom: 10px;
+}
+.newsLetterSection form{
+  width: 80%;
+  height: 35px;
+  background: #fff;
+  padding: 10px;
+  position: relative;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+.newsLetterSection form svg{
+  position: absolute;
+  top: 17;
+  left: 15px;
+  font-size: 25px;
+  opacity: 0.7;
+}
+.newsLetterSection form input{
+  width:80%;
+  height: 40px;
+  background: #fff;
+  border: 0px;
+  font-size: 22px;
+  
+}
+
+.newsLetterSection form button{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #233a95;
+  font-size: 16px;
+  border-radius: 10px;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 200;
+}
+
+.newsLetterSection form button:hover{
+  background: #233a95;
 }
