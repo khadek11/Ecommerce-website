@@ -316,15 +316,18 @@
 .containerr {
   width: 100%;
   overflow: hidden;
+  gap: 5px;
 }
 .productitemm {
   padding: 15px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   background: #f1f1f1;
-  width: 100%;
+  width: 90%;
   height: auto;
+ 
 
 }
+
 .imgWrapperr {
   width: 100%;
   display: flex;
@@ -374,4 +377,32 @@
 }
 .productitemm .slick-arrow.slick-next:hover {
   color: red;
+}
+.grid2{
+  margin: 35px 5px;
+}
+.productRow2{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.productRow2 .productItem{
+  width: 18%;
+  overflow: hidden;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+.flexx{
+  display: flex;
+  margin-top: 16px;
+  gap: 15px;
+  width: 100%;
+}
+.homeProducts .container .row .sticky{
+  position: sticky;
+  top: 10px;
+  z-index: 10000;
+}
+
+.banners {
+  width: 110%;
 }

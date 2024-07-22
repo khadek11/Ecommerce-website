@@ -2,26 +2,16 @@ import "./Home.css";
 import Button from "@mui/material/Button";
 
 import { IoIosArrowRoundForward } from "react-icons/io";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import "./Home.css";
 import { Rating } from "@mui/material";
 import { TfiFullscreen } from "react-icons/tfi";
 import { IoMdHeartEmpty } from "react-icons/io";
 
 const NewProducts = () => {
-    const productSliderOptions = {
-        dots: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        arrows: true,
-      };
+    
     return(
         <>
-        <div className="grid productsRow">
+        <div className="grid productsRow grid2">
               <div className="gridInfo">
                 <div className="info infooo">
                   <h3 className="hd">NEW PRODUCTS</h3>
@@ -35,8 +25,7 @@ const NewProducts = () => {
                 </Button>
               </div>
 
-              <div className="product-row">
-                <Slider {...productSliderOptions}>
+              <div className="product-row productRow2">
                   <div className="item2 productItem">
                     <div className="imgwrapper">
                       <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg" />
@@ -227,7 +216,127 @@ const NewProducts = () => {
                       </div>
                     </div>
                   </div>
-                </Slider>
+                  <div className="item2 productItem">
+                    <div className="imgwrapper">
+                      <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1720602808/1720602807718_fortune-sunlite-refined-sunflower-oil-1-l-product-images-o490000052-p490000052-0-202203150155.webp" />
+                      <span className="badge badge-primary">28%</span>
+                      <div className="actions">
+                        <Button>
+                          <TfiFullscreen />
+                        </Button>
+                        <Button>
+                          <IoMdHeartEmpty style={{ fontSize: "20px" }} />
+                        </Button>
+                      </div>
+                    </div>
+                    <div className="infoo">
+                      <h4>Fortune sunlite refined sunflower oil</h4>
+                      <span className="text-success">In stock</span>
+                      <Rating
+                        className="read-only"
+                        name="read-only"
+                        value={3}
+                        readOnly
+                        size="email"
+                        precision={0.5}
+                      />
+                      <div className="flex">
+                        <span className="oldPrice text-danger">$30.00</span>
+                        <span className="netPrice text-danger">$27.00</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="item2 productItem">
+                    <div className="imgwrapper">
+                      <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1720602808/1720602807718_fortune-sunlite-refined-sunflower-oil-1-l-product-images-o490000052-p490000052-0-202203150155.webp" />
+                      <span className="badge badge-primary">28%</span>
+                      <div className="actions">
+                        <Button>
+                          <TfiFullscreen />
+                        </Button>
+                        <Button>
+                          <IoMdHeartEmpty style={{ fontSize: "20px" }} />
+                        </Button>
+                      </div>
+                    </div>
+                    <div className="infoo">
+                      <h4>Fortune sunlite refined sunflower oil</h4>
+                      <span className="text-success">In stock</span>
+                      <Rating
+                        className="read-only"
+                        name="read-only"
+                        value={3}
+                        readOnly
+                        size="email"
+                        precision={0.5}
+                      />
+                      <div className="flex">
+                        <span className="oldPrice text-danger">$30.00</span>
+                        <span className="netPrice text-danger">$27.00</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="item2 productItem">
+                    <div className="imgwrapper">
+                      <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1720602808/1720602807718_fortune-sunlite-refined-sunflower-oil-1-l-product-images-o490000052-p490000052-0-202203150155.webp" />
+                      <span className="badge badge-primary">28%</span>
+                      <div className="actions">
+                        <Button>
+                          <TfiFullscreen />
+                        </Button>
+                        <Button>
+                          <IoMdHeartEmpty style={{ fontSize: "20px" }} />
+                        </Button>
+                      </div>
+                    </div>
+                    <div className="infoo">
+                      <h4>Fortune sunlite refined sunflower oil</h4>
+                      <span className="text-success">In stock</span>
+                      <Rating
+                        className="read-only"
+                        name="read-only"
+                        value={3}
+                        readOnly
+                        size="email"
+                        precision={0.5}
+                      />
+                      <div className="flex">
+                        <span className="oldPrice text-danger">$30.00</span>
+                        <span className="netPrice text-danger">$27.00</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="item2 productItem">
+                    <div className="imgwrapper">
+                      <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1720602808/1720602807718_fortune-sunlite-refined-sunflower-oil-1-l-product-images-o490000052-p490000052-0-202203150155.webp" />
+                      <span className="badge badge-primary">28%</span>
+                      <div className="actions">
+                        <Button>
+                          <TfiFullscreen />
+                        </Button>
+                        <Button>
+                          <IoMdHeartEmpty style={{ fontSize: "20px" }} />
+                        </Button>
+                      </div>
+                    </div>
+                    <div className="infoo">
+                      <h4>Fortune sunlite refined sunflower oil</h4>
+                      <span className="text-success">In stock</span>
+                      <Rating
+                        className="read-only"
+                        name="read-only"
+                        value={3}
+                        readOnly
+                        size="email"
+                        precision={0.5}
+                      />
+                      <div className="flex">
+                        <span className="oldPrice text-danger">$30.00</span>
+                        <span className="netPrice text-danger">$27.00</span>
+                      </div>
+                    </div>
+                  </div>
+                
               </div>
             </div>
         </>

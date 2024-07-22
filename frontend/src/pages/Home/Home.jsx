@@ -8,6 +8,8 @@ import "./Home.css";
 import ProductItem from "./ProductItem";
 import NewProducts from "./NewProducts";
 import HomeCat from "./HomeCat";
+import Banner3 from '../../assets/images/banner3.jpg'
+import Banner4 from '../../assets/images/banner4.jpg'
 
 function Home() {
   return (
@@ -18,9 +20,15 @@ function Home() {
       <section className="homeProducts">
         <div className="container">
           <div className="row">
-            <div className="grid">
+            <div className="grid sticky">
               <div className="banner1">
                 <img src={Banner1} className="cursor" />
+              </div>
+              <div className="banner1">
+                <img src={Banner2} className="cursor" />
+              </div>
+              <div className="banner1">
+                <img src={Banner2} className="cursor" />
               </div>
               <div className="banner1">
                 <img src={Banner2} className="cursor" />
@@ -28,8 +36,14 @@ function Home() {
             </div>
             <div>
               <ProductItem />
-
+              
               <NewProducts />
+              <div className="flexx">
+              <img src={Banner3}  className="banners"/>
+              <img src={Banner4} className="banners"/>
+             
+             </div>
+             
             </div>
           </div>
         </div>
