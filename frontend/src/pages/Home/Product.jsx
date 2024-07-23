@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import Button from "@mui/material/Button";
-import "./Home.css";
+
 import { Rating } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,55 +9,51 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { useContext } from "react";
 import { MyContext } from "../../App";
 import '../Listings/Listing.css'
+import './Home.css'
 
 const Product = (props) => {
-    const context = useContext(MyContext)
-     
-      const viewProductsDetails = (id) => {
-           context.setIsOpenProductModal(true);
-      }
-    return(
-        <>
-              <div className={`item2 productItem ${props.itemView}`}>
-                    <div className="imgwrapper">
-                      <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg" />
+  const context = useContext(MyContext);
 
-                      <span className="badge badge-primary">28%</span>
-                      <div className="actions">
-                        <Button onClick={() => viewProductsDetails(1)}>
-                          <TfiFullscreen />
-                        </Button>
-                        <Button>
-                          <IoMdHeartEmpty style={{ fontSize: "20px" }} />
-                        </Button>
-                      </div>
-                    </div>
-                    <div className="infoo">
-                      <h4>Werthers Original Caramel Hard</h4>
-                      <span className="text-success">In stock</span>
-                      <Rating
-                        className="read-only"
-                        name="read-only"
-                        value={1}
-                        readOnly
-                        size="email"
-                        precision={0.5}
-                      />
+  const viewProductsDetails = (id) => {
+      context.setIsOpenProductModal(true);
+  }
 
-                      <div className="flex">
-                        <span className="oldPrice text-danger">$20.00</span>
-                        <span className="netPrice text-danger">$14.00</span>
-                      </div>
-                    </div>
-                  </div>
-        </>
-    )
-
+  return (
+      <div className="item2 productIItem" style={props.itemView}>
+          <div className="imggwwrapper">
+              <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg" />
+              <span className="badge badge-primary">28%</span>
+              <div className="actions">
+                  <Button onClick={() => viewProductsDetails(1)}>
+                      <TfiFullscreen />
+                  </Button>
+                  <Button>
+                      <IoMdHeartEmpty style={{ fontSize: "20px" }} />
+                  </Button>
+              </div>
+          </div>
+          <div className="infoo">
+              <h4>Werthers Original Caramel Hard</h4>
+              <span className="text-success">In stock</span>
+              <Rating
+                  className="read-only"
+                  name="read-only"
+                  value={1}
+                  readOnly
+                  size="email"
+                  precision={0.5}
+              />
+              <div className="flex">
+                  <span className="oldPrice text-danger">$20.00</span>
+                  <span className="netPrice text-danger">$14.00</span>
+              </div>
+          </div>
+      </div>
+  );
 }
 
-
 Product.propTypes = {
-  itemView: PropTypes.string.isRequired,
+  itemView: PropTypes.object.isRequired, // Ensure this is an object
 };
 
-export default Product
+export default Product;

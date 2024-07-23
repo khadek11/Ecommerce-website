@@ -123,3 +123,52 @@ img {
           const handleClose = () => {
             setAnchorEl(null);
           };
+
+
+
+          <Product itemView={productView} />
+          <Product itemView={productView} />
+          <Product itemView={productView} />
+          <Product itemView={productView} />
+          <Product itemView={productView} />
+          <Product itemView={productView} />
+          <Product itemView={productView} />
+          <Product itemView={productView} />      
+
+          
+           
+           .productItem {
+            margin-right: 5px!;
+            display: block;
+            margin-top: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            justify-content: center;
+            background: #f1f1f1;
+            border-radius: 10px !important;
+            color: #000;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.2s;
+            padding: 0px;
+          }
+           .productItem .imgwrapper{
+            background: #fff;
+            border-radius: 7px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding: 0px;
+            margin-top: 0px;
+            margin-right: 14px;
+          }
+           .imgwrapper img {
+              width: auto;
+              height: auto;
+              display: block;
+              max-width: 100%;
+              max-height: 100%;
+            }

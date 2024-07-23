@@ -1,6 +1,6 @@
 import "./Home.css";
 import Button from "@mui/material/Button";
-
+import PropTypes from "prop-types";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import "./Home.css";
 import { Rating } from "@mui/material";
@@ -20,7 +20,7 @@ import { useContext } from "react";
 import { MyContext } from "../../App";
 
 
-const NewProducts = () => {
+const NewProducts = (props) => {
   const context = useContext(MyContext)
      
       const viewProductsDetails = (id) => {
@@ -45,7 +45,7 @@ const NewProducts = () => {
               </div>
 
               <div className="product-row productRow2">
-                  <div className="item2 productItem">
+                  <div className={`item2 productItem ${props.itemView}`}>
                     <div className="imgwrapper">
                       <img src={watch4} />
 
@@ -361,5 +361,10 @@ const NewProducts = () => {
             </div>
         </>
     )
+};
+
+
+NewProducts.propTypes = {
+  itemView: PropTypes.string.isRequired,
 };
 export default NewProducts

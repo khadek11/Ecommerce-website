@@ -10,18 +10,35 @@ import { FaAngleDown } from "react-icons/fa";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Product from '../Home/Product.jsx';
-
 import { useState } from "react";
 
 const Listing = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [productView, setProductView] = useState("four");
     const openDropDown = Boolean(anchorEl);
+
     const handleClick = (event) => {
-      setAnchorEl(event.currentTarget);
+        setAnchorEl(event.currentTarget);
     };
+
     const handleClose = () => {
-      setAnchorEl(null);
+        setAnchorEl(null);
+    };
+
+   
+    const productStyle = () => {
+        switch (productView) {
+            case "one":
+                return { width: "100%", display: "flex", alignItems: "center"}; 
+            case "two":
+                return { width: "48%" }; 
+            case "three":
+                return { width: "32%" }; 
+            case "four":
+                return { width: "23%" }; 
+            default:
+                return { width: "23" };
+        }
     };
 
     return (
@@ -69,15 +86,15 @@ const Listing = () => {
                                 </Menu>
                             </div>
                         </div>
-                        <div className="productListing">
-                            <Product itemView={productView} />
-                            <Product itemView={productView} />
-                            <Product itemView={productView} />
-                            <Product itemView={productView} />
-                            <Product itemView={productView} />
-                            <Product itemView={productView} />
-                            <Product itemView={productView} />
-                            <Product itemView={productView} />
+                        <div className="productListingg">
+                            <Product itemView={productStyle()} />
+                            <Product itemView={productStyle()} />
+                            <Product itemView={productStyle()} />
+                            <Product itemView={productStyle()} />
+                            <Product itemView={productStyle()} />
+                            <Product itemView={productStyle()} />
+                            <Product itemView={productStyle()} />
+                            <Product itemView={productStyle()} />
                         </div>
                     </div>
                 </div>
