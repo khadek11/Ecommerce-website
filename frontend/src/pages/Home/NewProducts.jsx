@@ -16,9 +16,16 @@ import tv4 from '../../assets/products/TV/tv4.webp'
 import tv3 from '../../assets/products/TV/tv3.webp'
 import earphone1 from '../../assets/products/earphones/earphone1.webp'
 import earphone2 from '../../assets/products/earphones/earphone2.webp'
+import { useContext } from "react";
+import { MyContext } from "../../App";
 
 
 const NewProducts = () => {
+  const context = useContext(MyContext)
+     
+      const viewProductsDetails = (id) => {
+           context.setIsOpenProductModal(true);
+      }
     
     return(
         <>
@@ -31,7 +38,7 @@ const NewProducts = () => {
                     View our new Products and the updated stock
                   </p>
                 </div>
-                <Button className="viewAllBtn">
+                <Button className="viewAllBtn" >
                   View All
                   <IoIosArrowRoundForward />
                 </Button>
@@ -45,7 +52,7 @@ const NewProducts = () => {
                       <span className="badge badge-primary">28%</span>
                       <div className="actions">
                         <Button>
-                          <TfiFullscreen />
+                          <TfiFullscreen onClick={() => viewProductsDetails(1)}/>
                         </Button>
                         <Button>
                           <IoMdHeartEmpty style={{ fontSize: "20px" }} />
