@@ -18,11 +18,7 @@ function Header() {
   return (
     <>
       <div className="headerWrapper">
-        <div className="bgheader">
-          <div className="container">
-            <p className="">Due to the current GenZ revolutionary movement orders may be processed with a slight delay</p>
-          </div>
-        </div>
+       
 
         <div className="header">
           <div className="container">

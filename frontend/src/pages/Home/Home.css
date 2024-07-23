@@ -311,100 +311,92 @@
   width: 90%;
   margin: auto;
   margin-top: 35px;
-  margin-bottom: 35px;
+  margin-bottom: 0px;
   position: relative;
 }
-.containerr {
+.containerrrr {
   width: 100%;
   overflow: hidden;
-  gap: 5px;
-}
-.productitemm {
-  padding: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  background: #f1f1f1;
-  width: 90%;
-  height: auto;
- 
-
+  gap: 20;
+  position: relative;
 }
 
 .imgWrapperr {
-  width: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 450%;
+  height: 45%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  
-
+  justify-content: center;
+  background-color: #f0f0f0;
 }
 .imgWrapperr img {
-  max-width: 100%;
   height: auto;
   display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
-.features{
+.features {
   color: #233a95;
   align-self: center;
   font-size: 28px;
   text-decoration: wavy;
 }
 
-.productitemm .slick-arrow {
-  position: absolute;
+.imgWrapperr .slick-arrow {
+  background: black;
   z-index: 100;
-  align-items: center;
-  justify-content: center;
-  background-color: antiquewhite;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  font-weight: bold;
+  position: absolute;
 }
-.productitemm .slick-arrow.slick-next {
-  top: -50px;
 
+.imgWrapperr .slick-arrow.slick-next {
+  background: #000;
+  top: 30px;
+  left: 0px;
 }
-.productitemm .slick-arrow.slick-prev {
+.imgWrapperr .slick-arrow.slick-prev {
   left: -20px;
 }
-.productitemm .slick-arrow.slick-next::before {
+.imgWrapperr .slick-arrow.slick-prev::before {
   color: red;
 }
-.productitemm .slick-arrow.slick-prev::before {
+.imgWrapperr .slick-arrow.slick-prev::before {
   color: red;
 }
-.productitemm .slick-arrow.slick-prev:hover {
+.imgWrapperr .slick-arrow.slick-prev:hover {
   color: red;
 }
-.productitemm .slick-arrow.slick-next:hover {
+.imgWrapperr .slick-arrow.slick-next:hover {
   color: red;
 }
-.grid2{
+
+.grid2 {
   margin: 35px 5px;
 }
-.productRow2{
+.productRow2 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
-.productRow2 .productItem{
-  width:18%;
+.productRow2 .productItem {
+  width: 18%;
   overflow: hidden;
   border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
-.flexx{
+.flexx {
   display: flex;
   margin-top: 16px;
   gap: 15px;
   width: 100%;
 }
-.homeProducts .container .row .stickyyy{
+.homeProducts .container .row .stickyyy {
   position: sticky;
   top: 10px;
   z-index: 10000;
 }
-
-
 
 .containerrr {
   width: 100%;
@@ -417,16 +409,13 @@
   margin-right: -15px;
   margin-left: -15px;
   flex-direction: row;
-  
 }
-.col{
+.col {
   width: 50%;
   position: static;
 }
 
-
-
-.newsLetterSection{
+.newsLetterSection {
   width: 100%;
   height: auto;
   background: #233a95;
@@ -437,38 +426,36 @@
   position: relative;
   overflow: hidden;
   padding: 80px 0px;
- 
 }
-.text-white{
+.text-white {
   color: #fff;
   margin-left: 20px;
 }
 
-.textdis{
+.textdis {
   margin-bottom: 1px;
   font-size: 20px;
-
 }
 
-.texthead{
+.texthead {
   font-size: 35px;
   font-weight: bolder;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.text-light{
+.text-light {
   color: #fff;
   opacity: 0.5;
   font-size: 16px;
 }
 
-.coupon{
+.coupon {
   position: absolute;
   right: 0px;
   bottom: 10px;
 }
-.newsLetterSection form{
+.newsLetterSection form {
   width: 80%;
   height: 35px;
   background: #fff;
@@ -477,23 +464,22 @@
   margin-left: 5px;
   border-radius: 10px;
 }
-.newsLetterSection form svg{
+.newsLetterSection form svg {
   position: absolute;
   top: 17;
   left: 15px;
   font-size: 25px;
   opacity: 0.7;
 }
-.newsLetterSection form input{
-  width:80%;
+.newsLetterSection form input {
+  width: 80%;
   height: 40px;
   background: #fff;
   border: 0px;
   font-size: 22px;
-  
 }
 
-.newsLetterSection form button{
+.newsLetterSection form button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -505,6 +491,157 @@
   font-weight: 200;
 }
 
-.newsLetterSection form button:hover{
+.newsLetterSection form button:hover {
   background: #233a95;
 }
+
+.closeee {
+  color: #000;
+  position: absolute;
+  right: -535px;
+  top: -10px; 
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  min-width: 40px;
+  background: #000;
+}
+.closeee svg{
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  
+}
+
+.modal{
+  margin-top: 0px;
+  color: #000;
+  margin-bottom: 4px;
+  font-size: 24px;
+  font-weight: bold;
+  
+}
+.align{
+  display: flex;
+  align-items: center;
+  
+}
+.brands{
+  display: flex;
+  align-items: center;
+}
+   
+.left{
+  margin-left: 10px;
+}
+.center{
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  gap: 10px;
+}
+.columnn1{
+  flex: 0 0 41.666667%; 
+  max-width: 41.666667%; 
+  box-sizing: border-box;
+}
+  
+.columnn2{
+  flex: 0 0 58.333333%; 
+  max-width: 58.333333%; 
+  box-sizing: border-box; 
+}
+.imageWWrapper{
+  width: 150px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWWrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.badgeModal{
+  background:#2bbef9;
+  color: #fff;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.productModal .MuiPaper-elevation{
+  min-width: 450px !important;
+  
+}
+.text-ipsum{
+  margin-top: 5px;
+}
+
+.carttt{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-bluee{
+  background: #233a95 !important;
+  color: #fff !important;
+  border-radius: 30px !important;
+  padding: 7px 17px !important;
+}
+.quantity{
+  display: flex;
+  align-items: center;
+  width: 150px;
+  gap: 10px;
+}
+.quantity button {
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: #edeef5 !important;
+  border: ipx solid rgba(0, 0, 0, 0.1)!important;
+  color: #000 !important;
+
+}
+.quantity button svg{
+  color: #000 !important;
+}
+.quantity input{
+  width: 30px;
+  border: 0px;
+  background: transparent;
+  outline: none;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.display{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  gap: 10px;
+}
+.display button{
+  text-transform: capitalize;
+  border-radius: 30px;
+  color: #000 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  
+}
+.display button svg{
+  font-size: 20px;
+}
+.ml{
+  margin-left: 3px;
+}
+

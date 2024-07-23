@@ -63,3 +63,53 @@ img {
                     <div className="imgwrapper">
                       <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg"/>
                     </div>
+
+
+                    
+             <h3>Fashion</h3>
+              <h3>Electronics</h3>
+               <h3>Groceries</h3>
+                <h3>Wellness</h3>
+                 <h3>Kitchen</h3>
+                  <h3>Fashion</h3>
+            <h3>Fashion</h3>
+                  <h3>Beauty</h3>
+                   <h3>Footware</h3>
+                    <h3>Fashion</h3>
+
+                    .imgWrapperr .slick-arrow {
+  position: absolute;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  font-weight: bold;
+}
+.productitemm .slick-arrow.slick-next {
+  top: -50px;
+
+}
+.productitemm .slick-arrow.slick-prev {
+  left: -20px;
+}
+.productitemm .slick-arrow.slick-next::before {
+  color: red;
+}
+.productitemm .slick-arrow.slick-prev::before {
+  color: red;
+}
+.productitemm .slick-arrow.slick-prev:hover {
+  color: red;
+}
+.productitemm .slick-arrow.slick-next:hover {
+  color: red;
+}
+
+{/*  <div className="bgheader">
+          <div className="container">
+            <p className="">Due to the current GenZ revolutionary movement orders may be processed with a slight delay</p>
+          </div>
+        </div> */}

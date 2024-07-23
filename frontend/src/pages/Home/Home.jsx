@@ -13,7 +13,7 @@ import Banner4 from '../../assets/images/banner4.jpg'
 import coupon from '../../assets/images/coupon.png'
 import { IoMailOutline} from 'react-icons/io5'
 import Button from "@mui/material/Button";
-import camera1 from '../../assets/products/camera/camera1.jpg'
+
 
 function Home() {
   return (
@@ -73,11 +73,6 @@ function Home() {
             </form>
 
 
-
-
-
-
-
               </div>
             <div className="col">
               <img src={coupon} className="coupon"/>
@@ -87,6 +82,8 @@ function Home() {
 
       
       </section>
+
+      
     </>
   );
 }

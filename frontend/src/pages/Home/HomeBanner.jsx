@@ -69,7 +69,7 @@ function HomeBanner() {
             className="itemImg"
           />
         </div>
-        <div className="item">
+        {/* <div className="item">
           <img
             src="https://sslimages.shoppersstop.com/sys-master/root/hf6/hf2/33142933127198/Highest-Deal-of-the-Week-web-Baggit-%2C-ED-%26-More_gh67.jpg"
             alt="banner"
@@ -91,8 +91,8 @@ function HomeBanner() {
             alt="banner"
             className="itemImg"
           />
-        </div>
-        <div className="item">
+        </div> */}
+        {/* <div className="item">
           <img
             src="https://sslimages.shoppersstop.com/sys-master/root/h24/h97/33120843399198/Highest-Deal-of-the-Week-web-Tommy-Hilfiger_ek--e03.jpg"
             alt="banner"
@@ -112,7 +112,7 @@ function HomeBanner() {
             alt="banner"
             className="itemImg"
           />
-        </div>
+        </div> */}
         
       </Slider>
     </div>

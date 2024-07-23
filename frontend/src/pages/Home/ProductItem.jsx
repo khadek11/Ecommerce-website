@@ -9,6 +9,8 @@ import "./Home.css";
 import { Rating } from "@mui/material";
 import { TfiFullscreen } from "react-icons/tfi";
 import { IoMdHeartEmpty } from "react-icons/io";
+import { useContext } from "react";
+import { MyContext } from "../../App";
 
 const ProductItem = () => {
     const productSliderOptions = {
@@ -19,6 +21,12 @@ const ProductItem = () => {
         slidesToScroll: 4,
         arrows: true,
       };
+      const context = useContext(MyContext)
+     
+      const viewProductsDetails = (id) => {
+           context.setIsOpenProductModal(true);
+      }
+      
     return(
         <>
         <div className="grid productsRow">
@@ -43,7 +51,7 @@ const ProductItem = () => {
 
                       <span className="badge badge-primary">28%</span>
                       <div className="actions">
-                        <Button>
+                        <Button onClick={() => viewProductsDetails(1)}>
                           <TfiFullscreen />
                         </Button>
                         <Button>
@@ -230,6 +238,10 @@ const ProductItem = () => {
                 </Slider>
               </div>
             </div>
+
+            
+
+            
         </>
     )
 };

@@ -4,10 +4,13 @@ import Home from "./pages/Home/Home";
 import Header from "./components/Header/Header";
 import { createContext, useEffect, useState } from "react";
 import axios from 'axios'
+import Footer from "./components/Footer/Footer";
+import ProductModal from "./pages/Home/ProductModal"
 
 const MyContext = createContext();
 
 function App() {
+  const [isOpenProductModal, setIsOpenProductModal] = useState(false)
   const [countryList, setCountryList] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('')
 
@@ -25,7 +28,10 @@ function App() {
   const values={
     countryList,
     setSelectedCountry,
-    selectedCountry
+    selectedCountry,
+    isOpenProductModal,
+    setIsOpenProductModal
+   
   }
   return (
     <>
@@ -35,6 +41,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
+          <Footer />
+
+          {
+              isOpenProductModal === true &&  <ProductModal />
+            }
         </MyContext.Provider>
       </BrowserRouter>
     </>
