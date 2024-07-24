@@ -96,7 +96,9 @@
   align-items: center;
   padding: 15px 25px;
 }
-
+.flexbtn button .act{
+ color: #ccc;
+} 
 .flexbtn button {
   width: 30px;
   height: 30px;
@@ -136,13 +138,9 @@
   gap: 10px !important;
   flex-wrap: wrap !important;
 }
-
-.productIItem {
-  
-  width: 48%;
+.productIItem{
   overflow: hidden;
   display: block;
-  margin-top: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   justify-content: center;
   border-radius: 10px !important;
@@ -151,7 +149,11 @@
   position: relative;
   transition: all 0.2s;
   padding: 0px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 10px;
 }
+
 .productIItem .imggwwrapper {
   background: #fff;
   border-radius: 7px;
@@ -160,94 +162,125 @@
   height: 220px;
   overflow: hidden;
   position: relative;
-  width: 100%;
+  
   padding: 0px;
   margin-top: 0px;
   margin-right: 14px;
 }
-.imggwwrapper img{
-    width: auto;
-    height: auto;
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
+.imggwwrapper img {
+  width: auto;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
-.productIItem {
-    position: relative;
-    cursor: pointer;
-  }
+
+
+
 .productIItem .imggwwrapper .badge {
-    display: block;
-    padding: 7px 10px;
-    background: #2bbef9;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 100;
-    color: #fff;
-    border-radius: 5px;
-  }
-  .productIItem .actions {
-    position: absolute;
-    top: 20px;
-    right: -100%;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .productIItem .imggwwrapper img {
-    transition: all 0.3s ease-in-out;
-  }
-  .productIItem .imggwwrapper:hover img {
-    transform: scale(1.1);
-  }
-  .productIItem .actions button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 40px;
-    height: 40px;
-    width: 40px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    background: #fff;
-  }
-  .productIItem .imggwwrapper {
-    overflow: hidden;
-  }
-  .productIItem .imggwwrapper:hover .actions {
-    opacity: 1;
-    right: 10px;
-  }
-  .productIItem .actions button svg {
-    color: #000;
-    opacity: 0.7;
-    font-size: 16px;
-    font-weight: 600;
-  }
-  .productIItem .actions button:hover svg {
-    color: #fff;
-  }
-  .productIItem .actions button:hover {
-    background: #233a95;
-  }
-  .imggwwrapper {
-    display: flex;
-    flex-direction: column;
-  }
+  display: block;
+  padding: 7px 10px;
+  background: #2bbef9;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  color: #fff;
+  border-radius: 5px;
+}
+.productIItem .actions {
+  position: absolute;
+  top: 20px;
+  right: -100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.productIItem .imggwwrapper img {
+  transition: all 0.3s ease-in-out;
+}
+.productIItem .imggwwrapper:hover img {
+  transform: scale(1.1);
+}
+.productIItem .actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background: #fff;
+}
+.productIItem .imggwwrapper {
+  overflow: hidden;
+}
+.productIItem .imggwwrapper:hover .actions {
+  opacity: 1;
+  right: 10px;
+}
+.productIItem .actions button svg {
+  color: #000;
+  opacity: 0.7;
+  font-size: 16px;
+  font-weight: 600;
+}
+.productIItem .actions button:hover svg {
+  color: #fff;
+}
+.productIItem .actions button:hover {
+  background: #233a95;
+}
+
+
+.productIItem h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.productIItem .infoo {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+
+.productIItem .full-width .imggwwrapper {
+  width: 25% !important;
+ 
+}
+.aalign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0px;
+}
+
+.sidebarr .stickky {
+  position: sticky;
+}
+
+.full-width {
+  width: 90%;
+  display: flex;
+ align-items: center;
   
-  .productIItem h4 {
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 2px;
-  }
-  .productIItem .infoo {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-  }
-  .productIItem .one{
-    display: flex;
-    align-items: center;
-  }
+}
+
+.half-width {
+  width: 48%;
+}
+
+.third-width {
+  width: 32%;
+}
+
+.quarter-width {
+  width: 23%;
+}
+
+.productItem {
+  box-sizing: border-box;
+}

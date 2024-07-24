@@ -15,6 +15,7 @@ const Sidebar = () => {
     return(
         <>
         <div className="sidebarr">
+            <div className="stickky">
         <div className="filterBox">
            <h5>PRODUCT CATEGORIES</h5>
             <div className="scroll">
@@ -71,6 +72,8 @@ const Sidebar = () => {
         <br />
         <Link to="#"><img src="https://klbtheme.com/bacola/wp-content/uploads/2021/05/sidebar-banner.gif" className='width'/></Link>
         </div>
+        </div>
+
         </>
     )
 }

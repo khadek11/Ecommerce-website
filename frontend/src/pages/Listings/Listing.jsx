@@ -11,6 +11,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Product from '../Home/Product.jsx';
 import { useState } from "react";
+import Pagination from "@mui/material/Pagination";
 
 const Listing = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -25,19 +26,18 @@ const Listing = () => {
         setAnchorEl(null);
     };
 
-   
     const productStyle = () => {
         switch (productView) {
             case "one":
-                return { width: "100%", display: "flex", alignItems: "center"}; 
+                return "full-width";
             case "two":
-                return { width: "48%" }; 
+                return "half-width";
             case "three":
-                return { width: "32%" }; 
+                return "third-width";
             case "four":
-                return { width: "23%" }; 
+                return "quarter-width";
             default:
-                return { width: "23" };
+                return "quarter-width";
         }
     };
 
@@ -50,16 +50,16 @@ const Listing = () => {
                         <img src="https://754969b0.rocketcdn.me/bacola/wp-content/uploads/2021/08/bacola-banner-18.jpg" className="width radius" alt="Banner" />
                         <div className="showBy">
                             <div className="flexbtn">
-                                <Button onClick={() => setProductView("one")}>
+                                <Button className={productView === "one" && "act"} onClick={() => setProductView("one")}>
                                     <IoIosMenu className="svgbtn" />
                                 </Button>
-                                <Button onClick={() => setProductView("two")}>
+                                <Button className={productView === "two" && "act"} onClick={() => setProductView("two")}>
                                     <CgMenuGridR className="svgbtn" />
                                 </Button>
-                                <Button onClick={() => setProductView("three")}>
+                                <Button className={productView === "three" && "act"} onClick={() => setProductView("three")}>
                                     <TfiLayoutGrid4Alt className="svgbtn" />
                                 </Button>
-                                <Button onClick={() => setProductView("four")}>
+                                <Button className={productView === "four" && "act"} onClick={() => setProductView("four")}>
                                     <PiDotsSixBold className="svgbtn" />
                                 </Button>
                             </div>
@@ -87,14 +87,16 @@ const Listing = () => {
                             </div>
                         </div>
                         <div className="productListingg">
-                            <Product itemView={productStyle()} />
-                            <Product itemView={productStyle()} />
-                            <Product itemView={productStyle()} />
-                            <Product itemView={productStyle()} />
-                            <Product itemView={productStyle()} />
-                            <Product itemView={productStyle()} />
-                            <Product itemView={productStyle()} />
-                            <Product itemView={productStyle()} />
+                            <Product itemViewName={productStyle()} />
+                            <Product itemViewName={productStyle()} />
+                            <Product itemViewName={productStyle()} />
+                            <Product itemViewName={productStyle()} />
+                            <Product itemViewName={productStyle()} />
+                            <Product itemViewName={productStyle()} />
+                           
+                        </div>
+                        <div className="aalign">
+                            <Pagination count={6} color="primary" size="large"/>
                         </div>
                     </div>
                 </div>

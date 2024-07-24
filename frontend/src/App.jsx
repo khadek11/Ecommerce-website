@@ -7,6 +7,10 @@ import axios from 'axios'
 import Footer from "./components/Footer/Footer";
 import ProductModal from "./pages/Home/ProductModal"
 import Listing from "./pages/Listings/Listing";
+import ProductDetails from "./pages/ProductDetails/ProductDetails";
+import Cart from "./pages/Cart/Cart"
+import SignUp from "./pages/register/SignUp";
+import SignIn from "./pages/register/SignIn";
 
 const MyContext = createContext();
 
@@ -14,6 +18,8 @@ function App() {
   const [isOpenProductModal, setIsOpenProductModal] = useState(false)
   const [countryList, setCountryList] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('')
+  const [isHeaderFooterShow, setIsHeaderFooterShow] = useState(true)
+  const [isLogin, setIsLogin] = useState(false)
 
   useEffect(() => {
     getCountry("/api");
@@ -31,23 +37,38 @@ function App() {
     setSelectedCountry,
     selectedCountry,
     isOpenProductModal,
-    setIsOpenProductModal
+    setIsOpenProductModal,
+    isHeaderFooterShow,
+    setIsHeaderFooterShow,
+    setIsLogin,
+    isLogin
    
   }
   return (
     <>
       <BrowserRouter>
         <MyContext.Provider value={values}>
-          <Header />
+         {
+          isHeaderFooterShow === true && <Header />
+         }
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/item:id" element={<Listing />} />
+            <Route path="/product:id" element={<ProductDetails />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/signin" element={<SignIn />} />
           </Routes>
-          <Footer />
+          {
+          isHeaderFooterShow === true && <Footer />
+         }
+           
 
           {
               isOpenProductModal === true &&  <ProductModal />
             }
+           
         </MyContext.Provider>
       </BrowserRouter>
     </>

@@ -9,6 +9,7 @@
     display: flex;
     width: 100%;
     top: 0px;
+    position: sticky;
     
 
 }
@@ -474,3 +475,12 @@ nav .list-item a button:hover{
 
 
  
+.signBtn {
+    color: #fff !important;
+    background: #233a95 !important;
+    
+}
+.signBtn a{
+    color: #fff !important;
+    text-decoration: none;
+}

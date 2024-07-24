@@ -269,31 +269,7 @@ function Navigation() {
                   </Link>
                 </div>
               </li>
-              <li className="list-item">
-                <Link to="/">
-                  <Button>Gift</Button>
-                </Link>
-                <div className="subMenu shadow">
-                  <Link to="/">
-                    <Button>clothing</Button>
-                  </Link>
-                  <Link to="/">
-                    <Button>footwear</Button>
-                  </Link>
-                  <Link to="/">
-                    <Button>Watches</Button>
-                  </Link>
-                  <Link to="/">
-                    <Button>clothing</Button>
-                  </Link>
-                  <Link to="/">
-                    <Button>footwear</Button>
-                  </Link>
-                  <Link to="/">
-                    <Button>Watches</Button>
-                  </Link>
-                </div>
-              </li>
+             
               <li className="list-item">
                 <Link to="/">
                   <Button>Blog</Button>

@@ -35,11 +35,19 @@ function Header() {
                 <SearchBar />
               </div>
                 <div className="part3">
-                  <Button className="circle"><FiUser className="svg-user"/></Button>
+                  {
+                    context.isLogin !== true ? <Button className='signBtn'>
+                    <Link to="/signin">Sign In</Link>
+                     </Button> :  <button className="circle"><FiUser className="svg-user"/></button>
+                  }
+                  
+                  
                   <div className="cartTab">
                     <span className="price">$3.35</span>
                     <div className="position">
-                    <button className="circle"><IoBagOutline className="svg-user"/></button>
+                    <button className="circle">
+                      <Link to="/cart"><IoBagOutline className="svg-user"/></Link>
+                      </button>
                     <span className="count">1</span>
                     </div>
                     
