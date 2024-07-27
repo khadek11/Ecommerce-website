@@ -12,12 +12,12 @@
   "dependencies": {
     "@ant-design/charts": "^2.1.2",
     "@ant-design/icons": "^5.4.0",
-    
     "@antv/x6-react-components": "^2.0.8",
     "@antv/xflow": "^2.1.12",
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^5.16.5",
+    "@reduxjs/toolkit": "^2.2.6",
     "antd": "^5.19.3",
     "axios": "^1.7.2",
     "formik": "^2.4.6",
@@ -39,7 +39,6 @@
     "swiper": "^11.1.7",
     "web-vitals": "^4.2.2",
     "yup": "^1.4.0"
-   
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
