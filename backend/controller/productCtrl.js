@@ -1,70 +1,21 @@
 const Product = require("../models/productModel");
-const { v4: uuidv4 } = require('uuid');
+
 const User = require("../models/userModel");
 const asyncHandler = require("express-async-handler");
 const slugify = require("slugify");
 const validateMongoDbId = require("../utils/validateMongodbId");
-const cloudinary = require("cloudinary");
 
-cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CONFIG_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_CONFIG_API_KEY,
-  api_secret: process.env.CLOUDINARY_CONFIG_API_SECRET,
-});
-const createProduct = asyncHandler(async (req, res)=> {
+
+
+const createProduct = asyncHandler(async (req, res) => {
   try {
     if (req.body.title) {
       req.body.slug = slugify(req.body.title);
     }
-
-    const uploadImage = async (image) => {
-      try {
-        const result = await cloudinary.uploader.upload(image, {
-          folder: "your_folder_name",
-          public_id: `image-${uuidv4()}`,
-        });
-        return result;
-      } catch (error) {
-        console.error(`Error uploading image: ${error.message}`);
-        throw error;
-      }
-    };
-
-    const imageUploadPromises = req.body.images.map((image) => {
-      return uploadImage(image);
-    });
-
-    const uploadedImages = await Promise.all(imageUploadPromises);
-    const imageUris = uploadedImages.map((item) => item.secure_url);
-
-    let productData = {
-      title: req.body.title,
-      slug: req.body.slug,
-      description: req.body.description,
-      images: imageUris,
-      brand: req.body.brand,
-      price: req.body.price,
-      category: req.body.category,
-      quantity: req.body.quantity,
-      sold: req.body.sold,
-      images: req.body.images,
-      ratings: req.body.ratings,
-      totalrating: req.body.totalrating,
-    };
-
-    let product = new Product(productData);
-    product = await product.save();
-    res.send(product);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({
-      error: {
-        code: 500,
-        message: "Failed to create product",
-        details: err.message,
-      },
-      success: false,
-    });
+    const newProduct = await Product.create(req.body);
+    res.json(newProduct);
+  } catch (error) {
+    throw new Error(error);
   }
 });
 
