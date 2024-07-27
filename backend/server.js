@@ -21,14 +21,28 @@ const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 
 
-app.use(cors());
-app.options('*', cors())
-app.use((req, res, next) => {''
-  res.header('Access-Control-Allow-Origin', 'https://ecommerce-website-khaki-five.vercel.app/', 'https://dreamy-wisp-15722e.netlify.app/', 'https://adminclientpanel.netlify.app/', 'http://localhost:5173');
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  next();
-});
+const allowedOrigins = [
+  'https://ecommerce-website-khaki-five.vercel.app',
+  'https://dreamy-wisp-15722e.netlify.app',
+  'https://adminclientpanel.netlify.app',
+  'http://localhost:5173'
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(cookieParser());
