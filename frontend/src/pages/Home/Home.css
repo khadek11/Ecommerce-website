@@ -644,3 +644,10 @@
   margin-left: 3px;
 }
 
+.displayflepic{
+  display: flex;
+  width: 100%;
+}
+.styles a{
+  text-decoration: none;
+}

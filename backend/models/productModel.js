@@ -24,7 +24,7 @@ var productSchema = new mongoose.Schema(
     },
     category: {
       type: String,
-      required: true,
+    
     },
     brand: {
       type: String,
@@ -38,12 +38,10 @@ var productSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
-    images: [
-      {
-        public_id: String,
-        url: String,
-      },
-    ],
+    images:[{
+      type:String,
+      required:true
+  }],
     color: [],
     tags: String,
     ratings: [

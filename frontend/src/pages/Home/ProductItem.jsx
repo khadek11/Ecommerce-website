@@ -1,6 +1,6 @@
 import "./Home.css";
 import Button from "@mui/material/Button";
-
+import {Link} from "react-router-dom"
 import { IoIosArrowRoundForward } from "react-icons/io";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -57,7 +57,9 @@ const ProductItem = () => {
 
               <div className="product-row">
                 <Slider {...productSliderOptions}>
+              
                   <div className="item2 productItem">
+                  <Link to="/product:id" className="styles">
                     <div className="imgwrapper">
                       <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg" />
 
@@ -71,6 +73,7 @@ const ProductItem = () => {
                         </Button>
                       </div>
                     </div>
+                    </Link>
                     <div className="infoo">
                       <h4>Werthers Original Caramel Hard</h4>
                       <span className="text-success">In stock</span>
@@ -89,8 +92,10 @@ const ProductItem = () => {
                       </div>
                     </div>
                   </div>
-
+                
+                 
                   <div className="item2 productItem">
+                  <Link to="/product:id" className="styles">
                     <div className="imgwrapper">
                       <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1721569165/1721569164353_test.png" />
 
@@ -104,6 +109,7 @@ const ProductItem = () => {
                         </Button>
                       </div>
                     </div>
+                    </Link>
                     <div className="infoo">
                       <h4>Vivo T2x5G (Glimmer Black 12,)</h4>
                       <span className="text-success">In stock</span>
@@ -123,6 +129,7 @@ const ProductItem = () => {
                     </div>
                   </div>
                   <div className="item2 productItem">
+                  <Link to="/product:id" className="styles">
                     <div className="imgwrapper">
                       <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1721279418/1721279417849_sony-alpha-ilce-6100y-24-2-mp-mirrorless-digital-slr-camera-with-16-50-mm-and-55-210mm-power-zoom-lens-aps-c-sensor-fast-auto-focus-real-time-eye-af-real-time-tracking-4k-vlogging-camera-tiltable-screen-d_1.webp" />
 
@@ -136,6 +143,7 @@ const ProductItem = () => {
                         </Button>
                       </div>
                     </div>
+                    </Link>
                     <div className="infoo">
                       <h4>Sony Alpha ILCE Glimmer Black,12...</h4>
                       <span className="text-success">In stock</span>
@@ -156,6 +164,7 @@ const ProductItem = () => {
                   </div>
 
                   <div className="item2 productItem">
+                  <Link to="/product:id" className="styles">
                     <div className="imgwrapper">
                       <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1721279291/1721279290434_lg-80-cm-32-inch-hd-ready-led-smart-tv-32lm560-digital-o491898016-p590039885-1-202009260709.webp" />
                       <span className="badge badge-primary">28%</span>
@@ -168,6 +177,7 @@ const ProductItem = () => {
                         </Button>
                       </div>
                     </div>
+                    </Link>
                     <div className="infoo">
                       <h4>LG smart tv(32INCH) digital smart tv</h4>
                       <span className="text-success">In stock</span>
@@ -187,7 +197,9 @@ const ProductItem = () => {
                     </div>
                   </div>
                   <div className="item2 productItem">
+                  <Link to="/product:id" className="styles">
                     <div className="imgwrapper">
+                   
                       <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1721279140/1721279140081_samsung-galaxy-f-series-f23-5g-128-gb-4-gb-ram-copper-blush-mobile-phone-digital-o493666095-p600340990-0-202304101447.webp" />
                       <span className="badge badge-primary">28%</span>
                       <div className="actions">
@@ -199,6 +211,7 @@ const ProductItem = () => {
                         </Button>
                       </div>
                     </div>
+                    </Link>
                     <div className="infoo">
                       <h4>Samsung Galaxy series mobile phone</h4>
                       <span className="text-success">In stock</span>
@@ -218,6 +231,7 @@ const ProductItem = () => {
                     </div>
                   </div>
                   <div className="item2 productItem">
+                  <Link to="/product:id" className="styles">
                     <div className="imgwrapper">
                       <img src="https://res.cloudinary.com/dvyozjjma/image/upload/v1720602808/1720602807718_fortune-sunlite-refined-sunflower-oil-1-l-product-images-o490000052-p490000052-0-202203150155.webp" />
                       <span className="badge badge-primary">28%</span>
@@ -230,6 +244,7 @@ const ProductItem = () => {
                         </Button>
                       </div>
                     </div>
+                    </Link>
                     <div className="infoo">
                       <h4>Fortune sunlite refined sunflower oil</h4>
                       <span className="text-success">In stock</span>

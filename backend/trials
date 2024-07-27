@@ -1,4 +1,23 @@
+
+try {
+    if (req.body.title) {
+      req.body.slug = slugify(req.body.title);
+    }
+    const newProduct = await Product.create(req.body);
+    res.json(newProduct);
+  } catch (error) {
+    throw new Error(error);
+  }
+});
+
+
 [
+
+
+
+
+
+
     {
         "images": [],
         "_id": "6629330fe202ba235c945a23",

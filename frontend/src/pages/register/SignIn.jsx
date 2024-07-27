@@ -18,7 +18,7 @@ const loginSchema = yup.object({
 
 const SignIn = () => {
     const dispatch = useDispatch()
-    
+    const navigate = useNavigate()
     const context = useContext(MyContext)
     const formik = useFormik({
       initialValues: {
@@ -28,6 +28,8 @@ const SignIn = () => {
       validationSchema: loginSchema,
       onSubmit: values => {
         dispatch(loginUser(values))
+        context.isLogin(true)
+        navigate('/')
         
       },
     });

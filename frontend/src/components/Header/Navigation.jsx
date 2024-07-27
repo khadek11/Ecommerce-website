@@ -38,98 +38,98 @@ function Navigation() {
                       <Button>men <FaAngleRight className="rightAngle"/></Button>
                     </Link>
                     <div className="subMenu">
-                      <Link to="/">
+                      <Link to="/item:id">
                         <Button>clothing</Button>
                       </Link>
-                      <Link to="/">
+                      <Link to="/item:id">
                         <Button>footwear</Button>
                       </Link>
-                      <Link to="/">
+                      <Link to="/item:id">
                         <Button>Watches</Button>
                       </Link>
-                      <Link to="/">
+                      <Link to="/item:id">
                         <Button>clothing</Button>
                       </Link>
-                      <Link to="/">
+                      <Link to="/item:id">
                         <Button>footwear</Button>
                       </Link>
-                      <Link to="/">
+                      <Link to="/item:id">
                         <Button>Watches</Button>
                       </Link>
                     </div>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/item:id">
                       <Button>women <FaAngleRight className="rightAngle"/></Button>
                     </Link>
                     <div className="subMenu">
-                      <Link to="/">
+                      <Link to="/item:id">
                         <Button>clothing</Button>
                       </Link>
-                      <Link to="/">
+                      <Link to="/item:id">
                         <Button>footwear</Button>
                       </Link>
-                      <Link to="/">
+                      <Link to="/item:id">
                         <Button>Watches</Button>
                       </Link>
-                      <Link to="/">
+                      <Link to="/item:id">
                         <Button>clothing</Button>
                       </Link>
-                      <Link to="/">
+                      <Link to="/item:id">
                         <Button>footwear</Button>
                       </Link>
-                      <Link to="/">
+                      <Link to="/item:id">
                         <Button>Watches</Button>
                       </Link>
                     </div>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/item:id">
                       <Button>beauty</Button>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/item:id">
                       <Button>watches</Button>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/item:id">
                       <Button>kids</Button>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/item:id">
                       <Button>Gift</Button>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/item:id">
                       <Button>men</Button>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/item:id">
                       <Button>women</Button>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/item:id">
                       <Button>beauty</Button>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/item:id">
                       <Button>watches</Button>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/item:id">
                       <Button>kids</Button>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/item:id">
                       <Button>Gift</Button>
                     </Link>
                   </li>
@@ -149,22 +149,22 @@ function Navigation() {
                   <Button>Men</Button>
                 </Link>
                 <div className="subMenu shadow">
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>clothing</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>footwear</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>Watches</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>clothing</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>footwear</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>Watches</Button>
                   </Link>
                 </div>
@@ -174,22 +174,22 @@ function Navigation() {
                   <Button>Women</Button>
                 </Link>
                 <div className="subMenu shadow">
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>clothing</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>footwear</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>Watches</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>clothing</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>footwear</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>Watches</Button>
                   </Link>
                 </div>
@@ -199,22 +199,22 @@ function Navigation() {
                   <Button>Beauty</Button>
                 </Link>
                 <div className="subMenu shadow">
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>clothing</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>footwear</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>Watches</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>clothing</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>footwear</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>Watches</Button>
                   </Link>
                 </div>
@@ -224,22 +224,22 @@ function Navigation() {
                   <Button>Watches</Button>
                 </Link>
                 <div className="subMenu shadow">
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>clothing</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>footwear</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>Watches</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>clothing</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>footwear</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>Watches</Button>
                   </Link>
                 </div>
@@ -249,37 +249,33 @@ function Navigation() {
                   <Button>Kids</Button>
                 </Link>
                 <div className="subMenu shadow">
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>clothing</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>footwear</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>Watches</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>clothing</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>footwear</Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/item:id">
                     <Button>Watches</Button>
                   </Link>
                 </div>
               </li>
              
               <li className="list-item">
-                <Link to="/">
+                <Link to="/item:id">
                   <Button>Blog</Button>
                 </Link>
               </li>
-              <li className="list-item">
-                <Link to="/">
-                  <Button>Contact</Button>
-                </Link>
-              </li>
+
             </ul>
           </div>
         </div>

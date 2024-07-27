@@ -4,7 +4,7 @@ import "./SignIn.css";
 import Logo from "../../assets/images/logo.jpg";
 import { TextField } from "@mui/material";
 import { Button } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from 'formik';
 import * as yup from 'yup'
 import { useDispatch } from 'react-redux';
@@ -21,7 +21,7 @@ const signupSchema = yup.object({
 });
 
 const SignUp = () => {
-
+  const navigate = useNavigate()
   const dispatch  = useDispatch();
   const context = useContext(MyContext);
   const formik = useFormik({
@@ -35,8 +35,11 @@ const SignUp = () => {
     validationSchema: signupSchema,
     onSubmit: values => {
       dispatch(registerUser(values))
+      context.isLogin(true)
+      navigate('/')
     },
   });
+
 
   useEffect(() => {
     context.setIsHeaderFooterShow(false);
