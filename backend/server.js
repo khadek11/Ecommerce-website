@@ -24,7 +24,7 @@ const morgan = require("morgan");
 app.use(cors());
 app.options('*', cors())
 app.use((req, res, next) => {''
-  res.header('Access-Control-Allow-Origin', 'https://ecommerce-website-khaki-five.vercel.app/', 'https://dreamy-wisp-15722e.netlify.app/', 'https://adminclientpanel.netlify.app/');
+  res.header('Access-Control-Allow-Origin', 'https://ecommerce-website-khaki-five.vercel.app/', 'https://dreamy-wisp-15722e.netlify.app/', 'https://adminclientpanel.netlify.app/', 'http://localhost:5173');
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
