@@ -1,0 +1,81 @@
+.loginSection{
+    padding: 45px 0;
+    width: 100%;
+    height: 100%;
+} 
+.containerLogin{
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+.cardLogin{
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 450px;
+    height: auto;
+    background: #fff;
+    margin: auto;
+}
+
+
+.textImage{
+    text-align: center;
+}
+.cardLogin h2{
+    font-size: 25px;
+}
+
+.cardLogin form{
+    padding: 20px 30px;
+}
+.wText{
+    width: 100%;
+    font-size: 40px;
+    
+
+}
+.form-group{
+    margin-bottom: 15px;
+}
+.forgot{
+    margin-top: 10px;
+}
+.forgot:hover{
+    color: blue;
+}
+.btn__blw{
+   background-color: #233a95 !important;
+   width: 100%;
+   margin-top: 10px !important;
+   margin-bottom: 10px !important;
+   color:#fff !important;
+   font-size: 20px !important;
+   font-weight: 700 !important;
+}
+.btn__blw a{
+    color: #fff !important;
+    
+}
+
+.signnot{
+    margin-left: 15px;
+}
+.not a{
+    text-decoration: none;
+}
+
+.Link{
+    height: 30px !important;
+}
+
+.rowForm{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.rowFormsix{
+    flex: 0 0 45%;
+    max-width: 45%;
+
+}

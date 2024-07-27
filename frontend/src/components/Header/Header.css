@@ -8,7 +8,9 @@
 .header{
     display: flex;
     width: 100%;
-    margin-top: 15px;
+    top: 0px;
+    position: sticky;
+    
 
 }
 /* @media(min-width: 1300px){
@@ -30,24 +32,25 @@
     background: transparent;
 }
 .bg-header{
-    background-color: #8e00a3;
-    text-align: center;
-    max-width: 100%;
+    background-color: #8e00a3 !important;
+    text-align: center !important;
+    max-width: 100% !important;
 }
-.headerWrapper .bg-header{
+.headerWrapper .bgheader{
     padding: 8px 0px;
 }
-.headerWrapper .bg-header p{
+.headerWrapper .bgheader p{
     color: #fff;
     font-size: 12px;
     font-weight: 700;
 }
 .headerWrapper{
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 .headerWrapper .header{
     width: 100%;
     height: auto;
+    top: 0px;
 }
 
  .row{
@@ -402,15 +405,17 @@ nav .list-item a button:hover{
 
 }
 
-.locationModal .MuiPaper-elevation{
-    padding: 25px;
-    width: 100%;
-    justify-content: center;
-    max-width: 450px;
+.MuiPaper-elevation{
+    padding: 25px !important;
+    width: 100% !important;
+    justify-content: center !important;
+    position: relative !important;
+
 
 }
-.MuiPaper-elevation{
-    position: relative;
+ .locationModal .MuiPaper-elevation{
+   
+    max-width: 450px;
 }
 
  .close-location{
@@ -470,3 +475,12 @@ nav .list-item a button:hover{
 
 
  
+.signBtn {
+    color: #fff !important;
+    background: #233a95 !important;
+    
+}
+.signBtn a{
+    color: #fff !important;
+    text-decoration: none;
+}

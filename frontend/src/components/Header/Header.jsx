@@ -18,11 +18,7 @@ function Header() {
   return (
     <>
       <div className="headerWrapper">
-        <div className="bg-header">
-          <div className="container">
-            <p className="mb-0 mt-0 text-center">Due to the current GenZ revolutionary movement orders may be processed with a slight delay</p>
-          </div>
-        </div>
+       
 
         <div className="header">
           <div className="container">
@@ -39,11 +35,19 @@ function Header() {
                 <SearchBar />
               </div>
                 <div className="part3">
-                  <Button className="circle"><FiUser className="svg-user"/></Button>
+                  {
+                    context.isLogin !== true ? <Button className='signBtn'>
+                    <Link to="/register/signin">Sign In</Link>
+                     </Button> :  <button className="circle"><FiUser className="svg-user"/></button>
+                  }
+                  
+                  
                   <div className="cartTab">
                     <span className="price">$3.35</span>
                     <div className="position">
-                    <button className="circle"><IoBagOutline className="svg-user"/></button>
+                    <button className="circle">
+                      <Link to="/cart"><IoBagOutline className="svg-user"/></Link>
+                      </button>
                     <span className="count">1</span>
                     </div>
                     

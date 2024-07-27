@@ -1,0 +1,132 @@
+.cartSection{
+    width: 100%;
+}
+.containerCart{
+    max-width:90%;
+    margin: auto;
+}
+.hdCart{
+    margin-bottom: 4px;
+    font-size: 32px;
+}
+.pcart{
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.table{
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    padding: 15px;
+}
+.rowCart{
+    display: flex;
+    flex-wrap: wrap;
+   width: 100%;
+   
+    
+}
+.colCart1{
+    flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+  padding-right: 15px;
+}
+.colCart2{
+    flex: 0 0 31.00000%;
+   max-width: 31.0000%;
+   margin-left: 12px; 
+
+}
+
+.table thead{
+    background: #ececec;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+}
+.table thead th:first-child{
+    border-top-left-radius: 10px;
+}
+.table thead th:first-child{
+    border-bottom-left-radius: 10px;
+}
+.table thead th:last-child{
+    border-top-right-radius: 10px;
+}
+.table thead th:last-child{
+    border-bottom-right-radius: 10px;
+}
+.table thead tr th{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 12px;
+}
+.flexCart{
+    display: flex;
+    align-items: center;
+    width: 400px;
+
+}
+.imgWrapperCart{
+    width: 100px;
+    overflow: hidden;
+}
+.imgWrapperCart img{
+    width: 100%
+}
+.infoCart a{
+    text-decoration: none;
+}
+.infoCart h6{
+    font-size: 16px;
+    color: black;
+    
+}
+
+.infoCart a:hover{
+    color: red;
+}
+
+.remove{
+    cursor: pointer;
+}
+
+.svgCart{
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.flexCart table th, .flexCart table td{
+    vertical-align: middle;
+}
+
+.cardCart{
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    background: #fff;
+}
+.cardCart h4{
+    font-size: 18px;
+    font-weight: 900;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
+}
+.subtotal{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.text-redd{
+    margin-left: auto;
+    color: red;
+    font-size: 18px;
+}
+.textFree{
+    margin-left: auto;
+}
+.btn-bluee:hover{
+  background: #ed174a !important;
+}

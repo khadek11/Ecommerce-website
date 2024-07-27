@@ -1,11 +1,56 @@
-const express = require("express");
-const connectDB = require('./config/dbConnect')
-const app = express();
+const express = require("express")
+const app =express()
+const bodyparser = require('body-parser')
+const { notFound, errorHandler } = require("./middlewares/errorHandler");
+const mongoose = require('mongoose')
+const cors = require('cors')
 const dotenv = require("dotenv").config();
-const PORT = 4000;
+const CategoryRoutes = require('./routes/CategoryRoute')
+const productRoutes = require('./routes/ProductRoutes')
+const authRouter = require("./routes/authRoute");
+const productRouter = require("./routes/productRoute");
+const blogRouter = require("./routes/blogRoute");
+const categoryRouter = require("./routes/prodcategoryRoute");
+const blogcategoryRouter = require("./routes/blogCatRoute");
+const brandRouter = require("./routes/brandRoute");
+const colorRouter = require("./routes/colorRoute");
+const enqRouter = require("./routes/enqRoute");
+const couponRouter = require("./routes/couponRoute");
+const uploadRouter = require("./routes/uploadRoute");
+const cookieParser = require("cookie-parser");
+const morgan = require("morgan");
 
 
-app.use("/", (req, res) => {res.send("Hello from server side")})
-app.listen(PORT, () => {
-    console.log(`Server is running  at PORT ${PORT}`);
+app.use(cors());
+app.options('*', cors())
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use("/api/user", authRouter);
+app.use("/api/product", productRouter);
+app.use("/api/blog", blogRouter);
+app.use("/api/category", categoryRouter);
+app.use("/api/blogcategory", blogcategoryRouter);
+app.use("/api/brand", brandRouter);
+app.use("/api/coupon", couponRouter);
+app.use("/api/color", colorRouter);
+app.use("/api/enquiry", enqRouter);
+app.use("/api/upload", uploadRouter);
+
+app.use('/api/Category', CategoryRoutes)
+app.use('/api/products', productRoutes)
+
+app.use(notFound);
+app.use(errorHandler);
+mongoose.connect(process.env.MONGODB_URI)
+.then(() => {
+  console.log("Database connection is ready")
+  app.listen(process.env.PORT, () => {
+    console.log(`Server is running  at PORT ${process.env.PORT}`);
   });
+})
+.catch((err) => {
+  console.log(err)
+})
+
+

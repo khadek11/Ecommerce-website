@@ -28,8 +28,193 @@ https://sslimages.shoppersstop.com/sys-master/root/h94/hd0/33142946791454/Rayban
 vertical: true,
     verticalSwiping: true,
 
+omeCat .swiper .item img {
+    margin-bottom: 10px;
+    width: 60%;
+}
+img, svg {
+    vertical-align: middle;
+}
+omeCat .swiper .item {
+    border: 1px solid #0000001a;
+    border-radius: 10px;
+    height: auto;
+    padding: 15px 5px;
+    transition: all .2s ease-in-out;
+    width: 100%;
+}
 
+img {
+    border-style: 
     
      
 <img class="ty-pict     cm-image lazyloaded" alt="" title="" src="https://shopit.co.ke/images/abt__ut2/banners/all/80/31-abt__ut2_main_image-banner_9nko-u5.jpg" id="det_img_1830247865" width="900" height="750" data-src="https://shopit.co.ke/images/abt__ut2/banners/all/80/31-abt__ut2_main_image-banner_9nko-u5.jpg" oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
   
+
+  <div className="item2 productItem" ></div>
+                    <div className="imgwrapper">
+                      <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg"/>
+                    </div>
+                    <div className="item2 productItem"></div>
+                    <div className="imgwrapper">
+                      <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg"/>
+                    </div>
+                    <div className="item2 productItem" ></div>
+                    <div className="imgwrapper">
+                      <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg"/>
+                    </div>
+
+
+                    
+             <h3>Fashion</h3>
+              <h3>Electronics</h3>
+               <h3>Groceries</h3>
+                <h3>Wellness</h3>
+                 <h3>Kitchen</h3>
+                  <h3>Fashion</h3>
+            <h3>Fashion</h3>
+                  <h3>Beauty</h3>
+                   <h3>Footware</h3>
+                    <h3>Fashion</h3>
+
+                    .imgWrapperr .slick-arrow {
+  position: absolute;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  font-weight: bold;
+}
+.productitemm .slick-arrow.slick-next {
+  top: -50px;
+
+}
+.productitemm .slick-arrow.slick-prev {
+  left: -20px;
+}
+.productitemm .slick-arrow.slick-next::before {
+  color: red;
+}
+.productitemm .slick-arrow.slick-prev::before {
+  color: red;
+}
+.productitemm .slick-arrow.slick-prev:hover {
+  color: red;
+}
+.productitemm .slick-arrow.slick-next:hover {
+  color: red;
+}
+
+{/*  <div className="bgheader">
+          <div className="container">
+            <p className="">Due to the current GenZ revolutionary movement orders may be processed with a slight delay</p>
+          </div>
+        </div> */}
+
+
+        const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+          const openDropDown = Boolean(anchorEl);
+          const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+            setAnchorEl(event.currentTarget);
+          };
+          const handleClose = () => {
+            setAnchorEl(null);
+          };
+
+
+
+          <Product itemView={productView} />
+          <Product itemView={productView} />
+          <Product itemView={productView} />
+          <Product itemView={productView} />
+          <Product itemView={productView} />
+          <Product itemView={productView} />
+          <Product itemView={productView} />
+          <Product itemView={productView} />      
+
+          
+           
+           .productItem {
+            margin-right: 5px!;
+            display: block;
+            margin-top: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            justify-content: center;
+            background: #f1f1f1;
+            border-radius: 10px !important;
+            color: #000;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.2s;
+            padding: 0px;
+          }
+           .productItem .imgwrapper{
+            background: #fff;
+            border-radius: 7px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding: 0px;
+            margin-top: 0px;
+            margin-right: 14px;
+          }
+           .imgwrapper img {
+              width: auto;
+              height: auto;
+              display: block;
+              max-width: 100%;
+              max-height: 100%;
+            }
+
+
+            .columnDetail {
+              max-width: 41.66667%; 
+              flex: 0 0 41.666667%; 
+              box-sizing: border-box; 
+          }
+          .column2Detail {
+              max-width: 58.33333%;
+              flex: 0 0 58.333333%; 
+              box-sizing: border-box;  
+          }
+          
+          .imageWWrapperDetail{
+              width: 25px;
+              height: 250px;
+              justify-content: center;
+              align-items: center;
+          }
+          .imageWWrapperDetail img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+          }
+
+          
+/* .loginSection{
+  position: absolute;
+  top: auto;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+}
+.loginSection::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  top:0;
+  left: 0;
+  background-image: linear-gradient(#1e3d81, #2334a3);
+  opacity: 0.9;
+  z-index: 1;
+  height: 100%;
+}
+*/

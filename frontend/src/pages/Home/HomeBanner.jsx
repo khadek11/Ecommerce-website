@@ -2,10 +2,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Home.css";
+import slideBanner1 from '../../assets/images/slideBanner1.jpg'
+import slideBanner2 from '../../assets/images/slideBanner2.jpg'
 
 function HomeBanner() {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -15,11 +17,26 @@ function HomeBanner() {
   };
 
   return (
+    <div className="space">
     <div className="homeBannerSection">
       <Slider {...settings}>
         <div className="item">
           <img
             src="https://sslimages.shoppersstop.com/sys-master/root/hd6/h55/33081764675614/watches_top-banner-web--new-home-page-main-2024-07-08.jpg"
+            alt="banner"
+            className="itemImg"
+          />
+        </div>
+        <div className="item">
+          <img
+            src={slideBanner1}
+            alt="banner"
+            className="itemImg"
+          />
+        </div>
+        <div className="item">
+          <img
+            src={slideBanner2}
             alt="banner"
             className="itemImg"
           />
@@ -52,7 +69,7 @@ function HomeBanner() {
             className="itemImg"
           />
         </div>
-        <div className="item">
+        {/* <div className="item">
           <img
             src="https://sslimages.shoppersstop.com/sys-master/root/hf6/hf2/33142933127198/Highest-Deal-of-the-Week-web-Baggit-%2C-ED-%26-More_gh67.jpg"
             alt="banner"
@@ -74,8 +91,8 @@ function HomeBanner() {
             alt="banner"
             className="itemImg"
           />
-        </div>
-        <div className="item">
+        </div> */}
+        {/* <div className="item">
           <img
             src="https://sslimages.shoppersstop.com/sys-master/root/h24/h97/33120843399198/Highest-Deal-of-the-Week-web-Tommy-Hilfiger_ek--e03.jpg"
             alt="banner"
@@ -95,9 +112,10 @@ function HomeBanner() {
             alt="banner"
             className="itemImg"
           />
-        </div>
+        </div> */}
         
       </Slider>
+    </div>
     </div>
   );
 }

@@ -1,0 +1,286 @@
+.productListing {
+  gap: 20px;
+  display: flex;
+}
+.sidebarr {
+  width: 20%;
+  flex: 0 0 20%;
+}
+
+.content-right {
+  width: 78%;
+  flex: 0 0 72%;
+  padding-left: 50px;
+}
+.product-listing-page {
+  padding: 45px 0px;
+}
+.filterBox {
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.containerL {
+  margin-left: 70px;
+}
+.filterBox h5 {
+  font-weight: 700;
+  font-size: 20px;
+}
+.scroll {
+  padding-left: 5px;
+  margin-bottom: 15px;
+}
+
+.scroll ul li {
+  list-style: none;
+  margin-bottom: 0px;
+  width: 100%;
+  padding: 0px;
+}
+
+.scroll {
+  padding-left: 5px !important;
+  max-height: 195px !important;
+  overflow-y: scroll !important;
+}
+.scroll::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+.filterBox {
+  margin-bottom: 20px;
+}
+.RangerSlide {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.priceRanger {
+  display: flex;
+  justify-content: space-between;
+}
+
+.range-slider .range-slider__thumb {
+  width: 18px !important;
+  height: 18px !important;
+  background: #000 !important;
+}
+.range-slider {
+  height: 5px !important;
+  background: #000 !important;
+}
+.range-slider .range-slider__thumb,
+.range-slider .range-slider__range {
+  background: #000 !important;
+}
+
+.textdark {
+  font-size: 14px;
+}
+
+.width {
+  width: 100%;
+}
+
+.radius {
+  width: 100% !important;
+  border-radius: 10px;
+}
+
+.showBy {
+  width: 100%;
+  height: 50px;
+  background: #f7f8fd;
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+}
+.flexbtn button .act{
+ color: #ccc;
+} 
+.flexbtn button {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border-radius: 50%;
+  color: #000;
+  font-size: 26px;
+}
+.flexbtn button svg {
+  color: #000 !important;
+  font-size: 26px !important;
+  opacity: 0.8;
+}
+
+.flexbtn button:hover svg {
+  opacity: 1;
+}
+.svgbtn {
+  font-size: 30px;
+}
+.auto {
+  margin-left: auto;
+}
+.auto button {
+  min-width: auto;
+  color: #000;
+}
+.auto button svg {
+  margin-left: 5px;
+  color: #000;
+}
+.widthmenu {
+  width: 80px !important;
+}
+.productListingg {
+  display: flex !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+}
+.productIItem{
+  overflow: hidden;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  border-radius: 10px !important;
+  color: #000;
+  height: auto;
+  position: relative;
+  transition: all 0.2s;
+  padding: 0px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.productIItem .imggwwrapper {
+  background: #fff;
+  border-radius: 7px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  
+  padding: 0px;
+  margin-top: 0px;
+  margin-right: 14px;
+}
+.imggwwrapper img {
+  width: auto;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+.productIItem .imggwwrapper .badge {
+  display: block;
+  padding: 7px 10px;
+  background: #2bbef9;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  color: #fff;
+  border-radius: 5px;
+}
+.productIItem .actions {
+  position: absolute;
+  top: 20px;
+  right: -100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.productIItem .imggwwrapper img {
+  transition: all 0.3s ease-in-out;
+}
+.productIItem .imggwwrapper:hover img {
+  transform: scale(1.1);
+}
+.productIItem .actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background: #fff;
+}
+.productIItem .imggwwrapper {
+  overflow: hidden;
+}
+.productIItem .imggwwrapper:hover .actions {
+  opacity: 1;
+  right: 10px;
+}
+.productIItem .actions button svg {
+  color: #000;
+  opacity: 0.7;
+  font-size: 16px;
+  font-weight: 600;
+}
+.productIItem .actions button:hover svg {
+  color: #fff;
+}
+.productIItem .actions button:hover {
+  background: #233a95;
+}
+
+
+.productIItem h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.productIItem .infoo {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+
+.productIItem .full-width .imggwwrapper {
+  width: 25% !important;
+ 
+}
+.aalign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0px;
+}
+
+.sidebarr .stickky {
+  position: sticky;
+}
+
+.full-width {
+  width: 90%;
+  display: flex;
+ align-items: center;
+  
+}
+
+.half-width {
+  width: 48%;
+}
+
+.third-width {
+  width: 32%;
+}
+
+.quarter-width {
+  width: 23%;
+}
+
+.productItem {
+  box-sizing: border-box;
+}
