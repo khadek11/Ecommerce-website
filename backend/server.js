@@ -23,19 +23,25 @@ const morgan = require("morgan");
 
 app.use(cors());
 app.options('*', cors())
+app.use((req, res, next) => {''
+  res.header('Access-Control-Allow-Origin', 'https://ecommerce-website-khaki-five.vercel.app/', 'https://dreamy-wisp-15722e.netlify.app/', 'https://adminclientpanel.netlify.app/');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use("/api/user", authRouter);
-app.use("/api/product", productRouter);
+app.use("/api/product", productRouter, cors());
 app.use("/api/blog", blogRouter);
 app.use("/api/category", categoryRouter);
 app.use("/api/blogcategory", blogcategoryRouter);
-app.use("/api/brand", brandRouter);
+app.use("/api/brand", brandRouter );
 app.use("/api/coupon", couponRouter);
 app.use("/api/color", colorRouter);
 app.use("/api/enquiry", enqRouter);
-app.use("/api/upload", uploadRouter);
+app.use("/api/upload", uploadRouter, cors()) ;
 
 app.use('/api/Category', CategoryRoutes)
 app.use('/api/products', productRoutes)
