@@ -37,7 +37,7 @@ function Header() {
                 <div className="part3">
                   {
                     context.isLogin !== true ? <Button className='signBtn'>
-                    <Link to="/signin">Sign In</Link>
+                    <Link to="/register/signin">Sign In</Link>
                      </Button> :  <button className="circle"><FiUser className="svg-user"/></button>
                   }
                   

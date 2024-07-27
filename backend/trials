@@ -1,0 +1,187 @@
+[
+    {
+        "images": [],
+        "_id": "6629330fe202ba235c945a23",
+        "name": "aaa",
+        "image": "ddd",
+        "color": "red",
+        "__v": 0
+    },
+    {
+        "images": [],
+        "_id": "6629342b55b86e37341bdf1a",
+        "name": "aaa",
+        "image": "ddd",
+        "color": "red",
+        "__v": 0
+    },
+    {
+        "images": [],
+        "_id": "662934def82abf34ac62af8b",
+        "name": "aaa",
+        "image": "ddd",
+        "color": "red",
+        "__v": 0
+    },
+    {
+        "images": [],
+        "_id": "662935c389de4424e07cd2e9",
+        "name": "aaa",
+        "image": "https://res.cloudinary.com/dvyozjjma/image/upload/v1713976769/rauvghk9ozcilplrmige.webp,https://res.cloudinary.com/dvyozjjma/image/upload/v1713976770/c61nlmqaylj1jtg34taa.webp",
+        "color": "red",
+        "__v": 0
+    },
+    {
+        "images": [],
+        "_id": "662936160d3d462058bcfb63",
+        "image": [
+            "https://res.cloudinary.com/dvyozjjma/image/upload/v1713976852/cxqyzbintpgvpguczt4c.webp",
+            "https://res.cloudinary.com/dvyozjjma/image/upload/v1713976852/zeb09dsnuhyw0x5jhafi.webp"
+        ],
+        "name": "aaa",
+        "color": "red",
+        "__v": 0
+    },
+    {
+        "images": [],
+        "_id": "6629365a26839a301c619122",
+        "image": [
+            "https://res.cloudinary.com/dvyozjjma/image/upload/v1713976921/usjyle4zl8rvosepk5ff.webp",
+            "https://res.cloudinary.com/dvyozjjma/image/upload/v1713976921/dq6czyk6nkm8y5orxkkw.webp"
+        ],
+        "name": "aaa",
+        "color": "red",
+        "__v": 0
+    },
+    {
+        "_id": "662936e7fec0b810dceafb33",
+        "images": [],
+        "name": "aaa",
+        "color": "red",
+        "__v": 0
+    },
+    {
+        "_id": "6629373e742ca704e4cc1940",
+        "images": [
+            "https://res.cloudinary.com/dvyozjjma/image/upload/v1713977148/qraqpmnnxzdhlbahnydc.webp",
+            "https://res.cloudinary.com/dvyozjjma/image/upload/v1713977148/asrwpiuz9skzd5nspqaz.webp"
+        ],
+        "name": "aaa",
+        "color": "red",
+        "__v": 0
+    },
+    {
+        "_id": "662938f0a8e2e61ff0f954a8",
+        "images": [
+            "https://res.cloudinary.com/dvyozjjma/image/upload/v1713977582/a6tkubllfn0gbschwgxp.webp",
+            "https://res.cloudinary.com/dvyozjjma/image/upload/v1713977582/miqjs9q6lz0h4szn0mdl.webp"
+        ],
+        "name": "aaa",
+        "color": "red",
+        "__v": 0
+    },
+    {
+        "_id": "6629fb124e34ae21acb99f05",
+        "images": [
+            "https://res.cloudinary.com/dvyozjjma/image/upload/v1714027280/ais1s123bvlbhdhvejii.webp"
+        ],
+        "name": "cat10",
+        "color": "blue",
+        "__v": 0
+    }
+]
+
+const Category = require("../model/Category");
+const express = require("express");
+const router = express.Router();
+
+const cloudinary = require("cloudinary");
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CONFIG_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_CONFIG_API_KEY,
+  api_secret: process.env.CLOUDINARY_CONFIG_API_SECRET,
+});
+router.get("/", async (req, res) => {
+  try {
+    const categoryList = await Category.find();
+    res.send(categoryList);
+  } catch (err) {
+    console.error(err);
+    res
+      .status(500)
+      .json({ success: false, message: "Failed to retrieve categories" });
+  }
+});
+
+router.post("/create", async (req, res) => {
+    if (!req.body.images) {
+      return res.status(400).json({
+        error: "No images provided",
+        status: false,
+      });
+    }
+  
+    const pLimitFunc = (await import("p-limit")).default;
+    const limit = pLimitFunc(2);
+    const imageToUpload = req.body.images.map((image) => {
+      return limit(async () => {
+        const result = cloudinary.uploader.upload(image);
+        return result;
+      });
+    });
+  
+    try {
+      const uploadStatus = await Promise.all(imageToUpload);
+      const imguri = uploadStatus.map((item) => {
+        return item.secure_uri;
+      });
+  
+      if (!uploadStatus) {
+        return res.status(500).json({
+          error: "images cannot upload",
+          status: false,
+        });
+      }
+  
+      let category = new Category({
+        name: req.body.name,
+        images: imguri,
+        color: req.body.color,
+      });
+  
+      category = await category.save();
+      res.status(201).json(category);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({
+        error: "Failed to create category",
+        status: false,
+      });
+    }
+  });
+module.exports = router;
+
+router.post('/create', async (req, res) => {
+    const { name, images, color } = req.body;
+    const uploadedImages = [];
+  
+    for (const imageUrl of images) {
+      try {
+        const result = await cloudinary.uploader.upload(imageUrl, {
+          folder: 'your_folder_name',
+          public_id: `image-${uuidv4()}`,
+        });
+        uploadedImages.push(result.secure_url);
+      } catch (error) {
+        console.log(error);
+        return res.status(500).json({ message: 'Error uploading image' });
+      }
+    }
+  
+    // Create your category with the uploaded images
+    const category = new Category({ name, images: uploadedImages, color });
+    await category.save();
+  
+    res.json({ message: 'Category created successfully' });
+  });

@@ -11,8 +11,20 @@ import { TfiFullscreen } from "react-icons/tfi";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { useContext } from "react";
 import { MyContext } from "../../App";
+import {useDispatch, useSelector} from "react-redux"
+import { getAllProducts} from '../../features/products/productSlice'
+import { useEffect } from "react";
 
 const ProductItem = () => {
+  const ProductState = useSelector((state)=> state.product.product);
+  console.log(ProductState)
+  const dispatch = useDispatch()
+  useEffect(() => {
+      getProducts()
+  }, [])
+  const getProducts = () => {
+     dispatch(getAllProducts())
+  }
     const productSliderOptions = {
         dots: false,
         infinite: false,
