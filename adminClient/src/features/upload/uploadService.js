@@ -1,23 +1,27 @@
 import axios from "axios";
-import { config } from "../../utils/axiosconfig";
-import { base_url } from "../../utils/baseUrl";
-
-const uploadImg = async (data) => {
-  const response = await axios.post(`${base_url}upload/`, data, config);
-  return response.data;
-};
-const deleteImg = async (id) => {
-  const response = await axios.delete(
-    `${base_url}upload/delete-img/${id}`,
-
-    config
-  );
-  return response.data;
-};
-
+import { base_url } from "../../utils/baseUrl";  
 const uploadService = {
-  uploadImg,
-  deleteImg,
+  uploadImg: async (formData) => {
+    try {
+      const response = await axios.post(`${base_url}upload/`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      return response.data;
+    } catch (error) {
+      throw new Error(error);
+    }
+  },
+
+  deleteImg: async (id) => {
+    try {
+      const response = await axios.delete(`${base_url}delete-img/${id}/`);
+      return response.data;
+    } catch (error) {
+      throw new Error(error);
+    }
+  },
 };
 
 export default uploadService;

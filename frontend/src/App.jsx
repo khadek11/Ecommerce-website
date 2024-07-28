@@ -12,7 +12,7 @@ import Cart from "./pages/Cart/Cart";
 import SignUp from "./pages/register/SignUp";
 import SignIn from "./pages/register/SignIn";
 import Layout from "./components/Layout";
-
+import ProductItem from "./pages/Home/ProductsTrial";
 const MyContext = createContext();
 
 function App() {
@@ -54,6 +54,7 @@ function App() {
             <Route path="/item:id" element={<Listing />} />
             <Route path="/product:id" element={<ProductDetails />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/products" element={<ProductItem />} />
             <Route path="/register" element={<Layout />}>
               <Route index element={<SignUp />} />
               <Route path="signin" element={<SignIn />} />

@@ -1,8 +1,6 @@
 import {  useEffect, useState } from "react";
 import CustomInput from "../components/CustomInput";
-/* import ReactQuill from "react-quill"; */
 import { useNavigate } from "react-router-dom";
-/* import "react-quill/dist/quill.snow.css"; */
 import { toast } from "react-toastify";
 import * as yup from "yup";
 import { useFormik } from "formik";
@@ -69,12 +67,19 @@ const Addproduct = () => {
       url: i.url,
     });
   });
-  const handleDrop = (acceptedFiles) => {
-    setSelectedFiles(acceptedFiles);
-    dispatch(uploadImg(acceptedFiles));
+  const handleDrop = async (acceptedFiles) => {
+    try {
+      const uploadResponse = await dispatch(uploadImg(acceptedFiles));
+      if (uploadResponse && uploadResponse.data) {
+        const images = uploadResponse.data.map((img) => img.url);
+        formik.setValues({ ...formik.values, images });
+      } else {
+        console.error("Upload response is not valid:", uploadResponse);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
-
-
   useEffect(() => {
     formik.values.color = color ? color : " ";
     formik.values.images = img;
@@ -92,7 +97,8 @@ const Addproduct = () => {
       images: "",
     },
     validationSchema: schema,
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
+      await handleDrop(selectedFiles);
       dispatch(createProducts(values));
       formik.resetForm();
       setColor(null);

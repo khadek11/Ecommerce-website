@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
 import productService from "./productService";
+import { uploadImg } from "../upload/uploadSlice";
 
 export const getProducts = createAsyncThunk(
   "product/get-products",
@@ -7,20 +8,36 @@ export const getProducts = createAsyncThunk(
     try {
       return await productService.getProducts();
     } catch (error) {
-      return thunkAPI.rejectWithValue(error);
+      return thunkAPI.rejectWithValue({
+        message: error.message,
+        status: error.response?.status,
+        data: error.response?.data,
+      });
     }
   }
 );
+
 export const createProducts = createAsyncThunk(
   "product/create-products",
   async (productData, thunkAPI) => {
     try {
-      return await productService.createProduct(productData);
+      // Upload images first
+      const uploadResponse = await thunkAPI.dispatch(uploadImg(productData.images)).unwrap();
+      const images = uploadResponse.map((img) => img.url);
+
+      // Create product with image URLs
+      const newProductData = { ...productData, images };
+      return await productService.createProduct(newProductData);
     } catch (error) {
-      return thunkAPI.rejectWithValue(error);
+      return thunkAPI.rejectWithValue({
+        message: error.message,
+        status: error.response?.status,
+        data: error.response?.data,
+      });
     }
   }
 );
+
 export const resetState = createAction("Reset_all");
 
 const initialState = {
@@ -30,6 +47,7 @@ const initialState = {
   isSuccess: false,
   message: "",
 };
+
 export const productSlice = createSlice({
   name: "products",
   initialState,
@@ -49,7 +67,7 @@ export const productSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.isSuccess = false;
-        state.message = action.error;
+        state.message = action.payload;
       })
       .addCase(createProducts.pending, (state) => {
         state.isLoading = true;
@@ -64,9 +82,10 @@ export const productSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.isSuccess = false;
-        state.message = action.error;
+        state.message = action.payload;
       })
       .addCase(resetState, () => initialState);
   },
 });
+
 export default productSlice.reducer;
