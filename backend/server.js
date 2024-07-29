@@ -25,7 +25,8 @@ const allowedOrigins = [
   'https://ecommerce-website-khaki-five.vercel.app',
   'https://dreamy-wisp-15722e.netlify.app',
   'https://adminclientpanel.netlify.app',
-  'http://localhost:5173'
+  'http://localhost:5173',
+   'http://localhost:5174'
 ];
 
 app.use(cors({

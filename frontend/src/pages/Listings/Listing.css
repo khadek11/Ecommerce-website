@@ -160,9 +160,11 @@
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   height: 220px;
+  display: block;
   overflow: hidden;
   position: relative;
-  
+  justify-content: center !important;
+  align-items: center !important;
   padding: 0px;
   margin-top: 0px;
   margin-right: 14px;

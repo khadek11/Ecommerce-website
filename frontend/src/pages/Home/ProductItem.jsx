@@ -1,72 +1,53 @@
-import "./Home.css";
-import Button from "@mui/material/Button";
-import {Link} from "react-router-dom"
-import { IoIosArrowRoundForward } from "react-icons/io";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useEffect } from 'react';
+import Product from './Product';
 import Slider from "react-slick";
-import "./Home.css";
-import { Rating } from "@mui/material";
-import { TfiFullscreen } from "react-icons/tfi";
-import { IoMdHeartEmpty } from "react-icons/io";
-import { useContext } from "react";
-import { MyContext } from "../../App";
-import {useDispatch, useSelector} from "react-redux"
-import { getAllProducts} from '../../features/products/productSlice'
-import Product from "./Product";
-import { useEffect } from "react";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import Button from "@mui/material/Button";
+import { useSelector, useDispatch } from 'react-redux';
+import { getAllProducts, selectAllProducts } from '../../features/products/productSlice';
 
 const ProductItem = () => {
-  const ProductState = useSelector((state)=> state.product.product);
-  console.log(ProductState)
-  const dispatch = useDispatch()
+  const productState = useSelector(selectAllProducts);
+  const dispatch = useDispatch();
+
   useEffect(() => {
-      getProducts()
-  }, [])
-  const getProducts = () => {
-     dispatch(getAllProducts())
-  }
-    const productSliderOptions = {
-        dots: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        arrows: true,
-      };
-      const context = useContext(MyContext)
-     
-      const viewProductsDetails = (id) => {
-           context.setIsOpenProductModal(true);
-      }
-      
-    return(
-        <>
-        <div className="grid productsRow">
-              <div className="gridInfo">
-                <div className="info">
-                  <h3 className="hd">BEST SELLERS</h3>
-                  <p className="text-light">
-                    Do not miss the country affairs until the end of the August
-                  </p>
-                </div>
-                <Button className="viewAllBtn">
-                  View All
-                  <IoIosArrowRoundForward />
-                </Button>
-              </div>
+    dispatch(getAllProducts());
+  }, [dispatch]);
 
-              <div className="product-row">
-                <Slider {...productSliderOptions}>
-                  <Product data={ProductState} />
-                </Slider>
-              </div>
-            </div>
+  const productSliderOptions = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    arrows: true,
+  };
 
-            
+  return (
+    <div className="grid productsRow">
+      <div className="gridInfo">
+        <div className="info">
+          <h3 className="hd">BEST SELLERS</h3>
+          <p className="text-light">
+            Do not miss the country affairs until the end of the August
+          </p>
+        </div>
+        <Button className="viewAllBtn">
+          View All
+          <IoIosArrowRoundForward />
+        </Button>
+      </div>
 
-            
-        </>
-    )
+      <div className="product-row">
+        <Slider {...productSliderOptions}>
+          {Array.isArray(productState) &&
+            productState.map((product, index) => (
+              <Product key={index} data={product} />
+            ))}
+        </Slider>
+      </div>
+    </div>
+  );
 };
-export default ProductItem
+
+export default ProductItem;
