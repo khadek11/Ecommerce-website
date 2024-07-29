@@ -3,14 +3,15 @@ import authService from "./userService";
 import { toast} from 'react-toastify'
 
 
-const initialState = {
-  user: "",
-  isError: false,
-  isLoading: false,
-  isSuccess: false,
-  message: "",
-};
 
+export const getuserProductwishlist = createAsyncThunk("user/wishlist", async(thunkAPI) => {
+  try{
+    return await authService.getUserWishlist();
+
+  }catch(error){
+    return thunkAPI.rejectWithValue(error);
+  }
+}) 
 export const registerUser= createAsyncThunk(
   "auth/register",
   async (userData, thunkAPI) => {
@@ -32,6 +33,19 @@ export const loginUser= createAsyncThunk(
     }
   }
 );
+
+
+const getcustomerfromLocalStorage = localStorage.getItem("customer")
+  ? JSON.parse(localStorage.getItem("customer"))
+  : null;
+  
+  const initialState = {
+    user: getcustomerfromLocalStorage,
+    isError: false,
+    isLoading: false,
+    isSuccess: false,
+    message: "",
+  };
 
 export const authSlice = createSlice({
   name: "auth",
@@ -84,6 +98,24 @@ export const authSlice = createSlice({
         if(state.isError=== true){
           toast.info("user failed to login ")
         }
+      })
+      .addCase(getuserProductwishlist.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getuserProductwishlist.fulfilled, (state, action) => {
+        state.isError = false;
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.wishlist = action.payload;
+        state.message = "success";
+        
+      })
+      .addCase(getuserProductwishlist.rejected, (state, action) => {
+        state.isError = true;
+        state.isSuccess = false;
+        state.message = action.error;
+        state.isLoading = false;
+       
       })
       
   },

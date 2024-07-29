@@ -13,6 +13,7 @@ import SignUp from "./pages/register/SignUp";
 import SignIn from "./pages/register/SignIn";
 import Layout from "./components/Layout";
 import ProductItem from "./pages/Home/ProductsTrial";
+import WishlistItems from "./pages/wishlist/wishlist";
 const MyContext = createContext();
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
             <Route path="/product:id" element={<ProductDetails />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/products" element={<ProductItem />} />
+            <Route path="/wishlist" element={<WishlistItems />} />
             <Route path="/register" element={<Layout />}>
               <Route index element={<SignUp />} />
               <Route path="signin" element={<SignIn />} />

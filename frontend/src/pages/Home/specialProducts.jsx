@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllProducts, selectAllProducts } from '../../features/products/productSlice';
 
-const ProductItem = () => {
+const Special = () => {
   const productState = useSelector(selectAllProducts);
   const dispatch = useDispatch();
 
@@ -27,9 +27,9 @@ const ProductItem = () => {
     <div className="grid productsRow">
       <div className="gridInfo">
         <div className="info">
-          <h3 className="hd">ALL PRODUCTS</h3>
+          <h3 className="hd">SPECIAL PRODUCTS</h3>
           <p className="text-light">
-            Do not miss the country affairs until the end of the August
+          Do not miss the most popular products
           </p>
         </div>
         <Button className="viewAllBtn">
@@ -41,13 +41,16 @@ const ProductItem = () => {
       <div className="product-row">
         <Slider {...productSliderOptions}>
           {Array.isArray(productState) &&
-            productState.map((product, index) => (
-              <Product key={index} data={product} />
-            ))}
+            productState.map((product, index) => {
+              if(product.tags === "special"){
+                return <Product key={index} data={product} />;
+              }
+              return null;
+            })}
         </Slider>
       </div>
     </div>
   );
 };
 
-export default ProductItem;
+export default Special;

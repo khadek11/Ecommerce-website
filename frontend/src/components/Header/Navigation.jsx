@@ -194,81 +194,12 @@ function Navigation() {
                   </Link>
                 </div>
               </li>
-              <li className="list-item">
-                <Link to="/">
-                  <Button>Beauty</Button>
-                </Link>
-                <div className="subMenu shadow">
-                  <Link to="/item:id">
-                    <Button>clothing</Button>
-                  </Link>
-                  <Link to="/item:id">
-                    <Button>footwear</Button>
-                  </Link>
-                  <Link to="/item:id">
-                    <Button>Watches</Button>
-                  </Link>
-                  <Link to="/item:id">
-                    <Button>clothing</Button>
-                  </Link>
-                  <Link to="/item:id">
-                    <Button>footwear</Button>
-                  </Link>
-                  <Link to="/item:id">
-                    <Button>Watches</Button>
-                  </Link>
-                </div>
-              </li>
-              <li className="list-item">
-                <Link to="/">
-                  <Button>Watches</Button>
-                </Link>
-                <div className="subMenu shadow">
-                  <Link to="/item:id">
-                    <Button>clothing</Button>
-                  </Link>
-                  <Link to="/item:id">
-                    <Button>footwear</Button>
-                  </Link>
-                  <Link to="/item:id">
-                    <Button>Watches</Button>
-                  </Link>
-                  <Link to="/item:id">
-                    <Button>clothing</Button>
-                  </Link>
-                  <Link to="/item:id">
-                    <Button>footwear</Button>
-                  </Link>
-                  <Link to="/item:id">
-                    <Button>Watches</Button>
-                  </Link>
-                </div>
-              </li>
-              <li className="list-item">
-                <Link to="/">
-                  <Button>Kids</Button>
-                </Link>
-                <div className="subMenu shadow">
-                  <Link to="/item:id">
-                    <Button>clothing</Button>
-                  </Link>
-                  <Link to="/item:id">
-                    <Button>footwear</Button>
-                  </Link>
-                  <Link to="/item:id">
-                    <Button>Watches</Button>
-                  </Link>
-                  <Link to="/item:id">
-                    <Button>clothing</Button>
-                  </Link>
-                  <Link to="/item:id">
-                    <Button>footwear</Button>
-                  </Link>
-                  <Link to="/item:id">
-                    <Button>Watches</Button>
-                  </Link>
-                </div>
-              </li>
+                <li className="list-item"><Link to="/wishlist"><Button>Wishlist</Button></Link></li>
+                <li className="list-item"><Link to="/product:id"><Button>Products</Button></Link></li>
+                <li className="list-item"><Link to="/item:id"><Button>Prod Category</Button></Link></li>
+             
+             
+             
              
               <li className="list-item">
                 <Link to="/item:id">

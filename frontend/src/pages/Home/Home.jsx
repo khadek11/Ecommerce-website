@@ -13,6 +13,7 @@ import Banner4 from '../../assets/images/banner4.jpg'
 import coupon from '../../assets/images/coupon.png'
 import { IoMailOutline} from 'react-icons/io5'
 import Button from "@mui/material/Button";
+import Special from "./specialProducts";
 
 
 function Home() {
@@ -40,8 +41,11 @@ function Home() {
             </div>
             <div>
               <ProductItem />
+              <Special />
               
               <NewProducts />
+
+         
               <div className="flexx">
               <img src={Banner3}  className="banners"/>
               <img src={Banner4} className="banners"/>

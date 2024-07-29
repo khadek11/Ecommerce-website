@@ -12,10 +12,10 @@ import "../Listings/Listing.css";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { IoMdHeart } from "react-icons/io";
-import {  useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { addToWishlist } from '../../features/products/productSlice'; // Add this import
 
-const Product = ({ data,  itemViewName  }) => {
+const SpecialProduct = ({ data }) => {
   const context = useContext(MyContext);
   const dispatch = useDispatch()
   const [isInWishlist, setIsInWishlist] = useState(false);
@@ -32,7 +32,7 @@ const Product = ({ data,  itemViewName  }) => {
   return (
     <>
       <Link to="/">
-      <div className={`item2 productIItem ${itemViewName}`}>
+        <div className={`item2 productIItem`}>
           <div className="imggwwrapper">
             <img src={data?.images[0].url} className="imageupload" />
             <span className="badge badge-primary">28%</span>
@@ -51,7 +51,6 @@ const Product = ({ data,  itemViewName  }) => {
           </div>
           <div className="infoo">
             <h4>{data.title}</h4>
-            <h4>{data.description}</h4>
             <span className="text-success">{data.brand}</span>
             <Rating
               className="read-only"
@@ -72,8 +71,7 @@ const Product = ({ data,  itemViewName  }) => {
   );
 };
 
-Product.propTypes = {
+SpecialProduct.propTypes = {
   data: PropTypes.object.isRequired,
-  itemViewName: PropTypes.string.isRequired,
 };
-export default Product;
+export default SpecialProduct;
