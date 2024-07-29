@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate }  from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import MainLayout from "./components/MainLayout";
 import Enquiries from "./pages/Enquiries";
@@ -31,7 +31,8 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Navigate to="/admin" replace />} />
+        <Route path="login" element={<Login />} />
         <Route path="/reset-password" element={<Resetpassword />} />
         <Route path="/forgot-password" element={<Forgotpassword />} />
           <Route path="/admin" element={<MainLayout />}>

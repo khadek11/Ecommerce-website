@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
 import productService from "./productService";
-import { uploadImg } from "../upload/uploadSlice";
 
+// Fetch products
 export const getProducts = createAsyncThunk(
   "product/get-products",
   async (thunkAPI) => {
@@ -17,20 +17,13 @@ export const getProducts = createAsyncThunk(
   }
 );
 
+// Create product without image upload
 export const createProducts = createAsyncThunk(
   "product/create-products",
   async (productData, thunkAPI) => {
     try {
-      // Upload images first
-      const uploadResponse = await thunkAPI.dispatch(uploadImg(productData.images)).unwrap();
-      const images = uploadResponse.map((img) => ({
-        public_id: img.public_id,
-        url: img.url
-      }));
-
-      // Create product with image data
-      const newProductData = { ...productData, images };
-      return await productService.createProduct(newProductData);
+      // Create product with provided data
+      return await productService.createProduct(productData);
     } catch (error) {
       return thunkAPI.rejectWithValue({
         message: error.message,
@@ -41,6 +34,7 @@ export const createProducts = createAsyncThunk(
   }
 );
 
+// Reset state
 export const resetState = createAction("Reset_all");
 
 const initialState = {
@@ -51,6 +45,7 @@ const initialState = {
   message: "",
 };
 
+// Product slice
 export const productSlice = createSlice({
   name: "products",
   initialState,
