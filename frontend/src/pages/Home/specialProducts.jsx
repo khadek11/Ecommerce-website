@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import Product from './Product';
+import React, { useEffect, useMemo } from 'react';
+import SpecialProduct from './specialProduct';  // Make sure this import matches your file name
 import Slider from "react-slick";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Button from "@mui/material/Button";
@@ -14,13 +14,42 @@ const Special = () => {
     dispatch(getAllProducts());
   }, [dispatch]);
 
+  const specialProducts = useMemo(() => {
+    return Array.isArray(productState) 
+      ? productState.filter(product => product.tags === "special")
+      : [];
+  }, [productState]);
+
   const productSliderOptions = {
     dots: false,
-    infinite: false,
+    infinite: specialProducts.length > 4,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (
@@ -29,7 +58,7 @@ const Special = () => {
         <div className="info">
           <h3 className="hd">SPECIAL PRODUCTS</h3>
           <p className="text-light">
-          Do not miss the most popular products
+            Do not miss the most popular products
           </p>
         </div>
         <Button className="viewAllBtn">
@@ -39,15 +68,15 @@ const Special = () => {
       </div>
 
       <div className="product-row">
-        <Slider {...productSliderOptions}>
-          {Array.isArray(productState) &&
-            productState.map((product, index) => {
-              if(product.tags === "special"){
-                return <Product key={index} data={product} />;
-              }
-              return null;
-            })}
-        </Slider>
+        {specialProducts.length > 0 ? (
+          <Slider {...productSliderOptions}>
+            {specialProducts.map((product, index) => (
+              <SpecialProduct key={index} data={product} />
+            ))}
+          </Slider>
+        ) : (
+          <p>No special products available.</p>
+        )}
       </div>
     </div>
   );
