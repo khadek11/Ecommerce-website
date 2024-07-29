@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import {  useEffect, useState } from "react";
 import CustomInput from "../components/CustomInput";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -9,9 +9,9 @@ import { getBrands } from "../features/brand/brandSlice";
 import { getCategories } from "../features/pcategory/pcategorySlice";
 import { getColors } from "../features/color/colorSlice";
 import { Select } from "antd";
+import Dropzone from "react-dropzone";
+import { delImg, uploadImg } from "../features/upload/uploadSlice";
 import { createProducts, resetState } from "../features/product/productSlice";
-import axios from 'axios';
-
 let schema = yup.object().shape({
   title: yup.string().required("Title is Required"),
   description: yup.string().required("Description is Required"),
@@ -20,50 +20,19 @@ let schema = yup.object().shape({
   category: yup.string().required("Category is Required"),
   tags: yup.string().required("Tag is Required"),
   color: yup
-  .array()
-  .min(1, "Pick at least one color")
-  .required("Color is Required"),
+    .array()
+    .min(1, "Pick at least one color")
+    .required("Color is Required"),
   quantity: yup.number().required("Quantity is Required"),
-  images: yup.array().required("Images are Required"),
 });
 
 const Addproduct = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [color, setColor] = useState([]);
-  const [files, setFiles] = useState([]);
-  const [uploadedImages, setUploadedImages] = useState([]);
-
-  const handleFileChange = (e) => {
-    setFiles(Array.from(e.target.files));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    files.forEach((file) => formData.append("images", file));
-
-    try {
-      const response = await axios.post(
-        "http://localhost:4000/api/upload/",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
-      if (response.status === 200) {
-        setUploadedImages(response.data);
-        formik.setFieldValue('images', response.data);
-      } else {
-        console.error("Error uploading images:", response.status);
-      }
-    } catch (error) {
-      console.error("Error uploading images:", error);
-    }
-  };
-
+  const [images, setImages] = useState([]);
+  const [selectedFiles, setSelectedFiles] = useState([]);
+  console.log(color);
   useEffect(() => {
     dispatch(getBrands());
     dispatch(getCategories());
@@ -73,7 +42,7 @@ const Addproduct = () => {
   const brandState = useSelector((state) => state.brand.brands);
   const catState = useSelector((state) => state.pCategory.pCategories);
   const colorState = useSelector((state) => state.color.colors);
-
+  const imgState = useSelector((state) => state.upload.images);
   const newProduct = useSelector((state) => state.product);
   const { isSuccess, isError, isLoading, createdProduct } = newProduct;
   useEffect(() => {
@@ -91,7 +60,23 @@ const Addproduct = () => {
       value: i._id,
     });
   });
+  const img = [];
+  imgState.forEach((i) => {
+    img.push({
+      public_id: i.public_id,
+      url: i.url,
+    });
+  });
+  const handleDrop = (acceptedFiles) => {
+    setSelectedFiles(acceptedFiles);
+    dispatch(uploadImg(acceptedFiles));
+  };
 
+
+  useEffect(() => {
+    formik.values.color = color ? color : " ";
+    formik.values.images = img;
+  }, [color, img]);
   const formik = useFormik({
     initialValues: {
       title: "",
@@ -100,34 +85,30 @@ const Addproduct = () => {
       brand: "",
       category: "",
       tags: "",
-      color: [],
+      color: "",
       quantity: "",
-      images: [],
+      images: "",
     },
     validationSchema: schema,
     onSubmit: (values) => {
       dispatch(createProducts(values));
-      formik.setFieldValue('title', '');
-      formik.setFieldValue('description', '');
-      formik.setFieldValue('price', '');
-      formik.setFieldValue('brand', '');
-      formik.setFieldValue('category', '');
-      formik.setFieldValue('tags', '');
-      formik.setFieldValue('color', []);
-      formik.setFieldValue('quantity', '');
+      formik.resetForm();
       setColor(null);
+      setTimeout(() => {
+        dispatch(resetState());
+      }, 3000);
     },
   });
   const handleColors = (e) => {
     setColor(e);
-    formik.setFieldValue('color', e);
+    console.log(color);
   };
   return (
     <div>
       <h3 className="mb-4 title">Add Product</h3>
       <div>
         <form
-              onSubmit={formik.handleSubmit}
+          onSubmit={formik.handleSubmit}
           className="d-flex gap-3 flex-column"
         >
           <CustomInput
@@ -142,14 +123,14 @@ const Addproduct = () => {
             {formik.touched.title && formik.errors.title}
           </div>
           <div className="">
-            <CustomInput
-              type="text"
-              label="Enter Product description"
-              name="description"
-              onChng={formik.handleChange("description")}
-              onBlr={formik.handleBlur("description")}
-              val={formik.values.description}
-            />
+          <CustomInput
+            type="text"
+            label="Enter Product description"
+            name="description"
+            onChng={formik.handleChange("description")}
+            onBlr={formik.handleBlur("description")}
+            val={formik.values.description}
+          />
           </div>
           <div className="error">
             {formik.touched.description && formik.errors.description}
@@ -247,16 +228,39 @@ const Addproduct = () => {
           <div className="error">
             {formik.touched.quantity && formik.errors.quantity}
           </div>
-          <div>
-          
-              <input type="file" multiple onChange={handleFileChange} />
-              <button type="submit">Upload Images</button>
-           
-            <div>
-              {uploadedImages.map((image, index) => (
-                <img key={index} src={image.url} alt={`Uploaded ${index}`} />
-              ))}
+         <div className="bg-white border-1 p-5 text-center">
+            <Dropzone onDrop={handleDrop}>
+              {({ getRootProps, getInputProps, isDragActive }) => (
+                <div {...getRootProps()} className="dropzone">
+                  <input {...getInputProps()} />
+                  {
+                    isDragActive ? <p>Drop the file here ...</p> : <p>Drag and drop or click to select a file</p>
+                  }
+                </div>
+              )}
+            </Dropzone>
+          </div>
+          <div className="showimages d-flex flex-wrap gap-3">
+            {selectedFiles.map((file, index) => (
+              <div key={index}>
+                <img src={URL.createObjectURL(file)} alt="Selected File" width={200} height={200} />
+              </div>
+            ))}
             </div>
+          <div className="showimages d-flex flex-wrap gap-3">
+            {imgState?.map((i, j) => {
+              return (
+                <div className=" position-relative" key={j}>
+                  <button
+                    type="button"
+                    onClick={() => dispatch(delImg(i.public_id))}
+                    className="btn-close position-absolute"
+                    style={{ top: "10px", right: "10px" }}
+                  ></button>
+                  <img src={i.url} alt="" width={200} height={200} />
+                </div>
+              );
+            })}
           </div>
           <button
             className="btn btn-success border-0 rounded-3 my-5"

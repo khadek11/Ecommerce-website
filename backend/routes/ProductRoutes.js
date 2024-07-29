@@ -4,6 +4,7 @@ const {Productmodel} = require('../models/Product');
 const express = require("express");
 const router = express.Router();
 const cloudinary = require("cloudinary");
+const Product = require("../models/Product")
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CONFIG_CLOUD_NAME,

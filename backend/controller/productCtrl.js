@@ -12,6 +12,17 @@ const createProduct = asyncHandler(async (req, res) => {
     if (req.body.title) {
       req.body.slug = slugify(req.body.title);
     }
+    
+    // Check if images are provided in the request body
+    if (req.body.images && Array.isArray(req.body.images)) {
+      // Map the image URLs to the format expected by the Product schema
+      const formattedImages = req.body.images.map(image => ({
+        public_id: image.public_id,
+        url: image.url
+      }));
+      req.body.images = formattedImages;
+    }
+
     const newProduct = await Product.create(req.body);
     res.json(newProduct);
   } catch (error) {

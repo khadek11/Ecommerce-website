@@ -20,7 +20,7 @@ import Addcat from "./pages/Addcat";
 import Addbrand from "./pages/Addbrand";
 import Brandlist from "./pages/Brandlist";
 import Productlist from "./pages/Productlist";
-import Addproduct from "./pages/Addproduct";
+import Addproduct from "./pages/Addproduct"
 import Login from "./pages/Login";
 import Resetpassword from "./pages/Resetpassword";
 import Forgotpassword from "./pages/Forgotpassword";

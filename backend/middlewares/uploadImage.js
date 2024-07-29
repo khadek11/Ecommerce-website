@@ -47,11 +47,14 @@ const productImgResize = async (req, res, next) => {
 
         // Upload to Cloudinary
         const uploadedImage = await cloudinaryUploadImg(outputPath);
-        urls.push(uploadedImage);
+        urls.push({
+          public_id: uploadedImage.public_id,
+          url: uploadedImage.url
+        });
 
         // Clean up local files
-        await fs.promises.unlink(file.path); // Remove the temporary uploaded file
-        await fs.promises.unlink(outputPath); // Remove the resized file
+        await fs.promises.unlink(file.path);
+        await fs.promises.unlink(outputPath);
       })
     );
     req.body.images = urls;
@@ -61,7 +64,6 @@ const productImgResize = async (req, res, next) => {
     next(error);
   }
 };
-
 const blogImgResize = async (req, res, next) => {
   if (!req.files) return next();
   await Promise.all(

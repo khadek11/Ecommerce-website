@@ -1,16 +1,11 @@
-const express = require("express");
-const { uploadImages, deleteImages } = require("../controller/uploadCtrl");
-const { isAdmin, authMiddleware } = require("../middlewares/authMiddleware");
-const { uploadPhoto, productImgResize } = require("../middlewares/uploadImage");
+// routes/uploadRoutes.js
+
+const express = require('express');
 const router = express.Router();
+const multer = require('multer');
+const upload = multer({ dest: './uploads/' });
+const uploadImages = require('../controller/uploadCtrl'); // Adjust the path as needed
 
-router.post(
-  "/",
-  uploadPhoto.array("images", 10),
-  productImgResize,
-  uploadImages
-);
-
-router.delete("/delete-img/:id",  deleteImages);
+router.post('/', upload.array('images', 12), uploadImages);
 
 module.exports = router;
